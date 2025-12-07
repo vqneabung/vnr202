@@ -34,7 +34,7 @@ const features = [
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: "#0F1C3F" }} className="text-[#F5EDE0]">
+    <footer style={{ backgroundColor: "#0F1C3F" }} className="text-white">
       {/* Decorative top border */}
       <div className="h-1" style={{ background: "linear-gradient(90deg, #8B1A1A, #C9A227, #8B1A1A)" }}></div>
       
@@ -50,11 +50,11 @@ export default function Footer() {
                 <Star className="w-5 h-5 text-white" />
               </div>
               <div>
-                <span className="font-bold text-lg text-[#F5EDE0]" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>Lịch Sử Đảng</span>
+                <span className="font-bold text-lg text-white">Lịch Sử Đảng</span>
                 <span className="text-[#C9A227] text-xs block tracking-widest">1945 — 1975</span>
               </div>
             </Link>
-            <p className="text-[#F5EDE0]/70 text-sm leading-relaxed mb-4">
+            <p className="text-white/80 text-sm leading-relaxed mb-4">
               Trang web cung cấp kiến thức trọng tâm về quá trình Đảng lãnh đạo hai cuộc kháng chiến, 
               hoàn thành giải phóng dân tộc, thống nhất đất nước.
             </p>
@@ -64,7 +64,7 @@ export default function Footer() {
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: "rgba(139, 26, 26, 0.3)" }}>
                     <feature.icon className="w-5 h-5 text-[#C9A227]" />
                   </div>
-                  <span className="text-xs text-[#F5EDE0]/60">{feature.label}</span>
+                  <span className="text-xs text-white/70">{feature.label}</span>
                 </div>
               ))}
             </div>
@@ -81,7 +81,8 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-[#F5EDE0]/70 hover:text-[#C9A227] transition-colors text-sm"
+                      className="text-[#F4D03F] hover:text-[#FFD700] transition-colors text-sm font-medium"
+                      style={{ color: '#F4D03F' }}
                     >
                       {link.name}
                     </Link>
@@ -97,13 +98,13 @@ export default function Footer() {
       <div className="border-t border-[#C9A227]/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-[#F5EDE0]/60 text-sm text-center md:text-left">
+            <p className="text-white/70 text-sm text-center md:text-left">
               © 2025 Lịch Sử Đảng Lãnh Đạo Cách Mạng Việt Nam. Dự án học tập.
             </p>
             <div className="flex items-center gap-2">
-              <span className="text-[#F5EDE0]/60 text-xs">Được xây dựng với</span>
-              <span className="text-[#8B1A1A]">❤</span>
-              <span className="text-[#F5EDE0]/60 text-xs">bằng Next.js</span>
+              <span className="text-white/70 text-xs">Được xây dựng với</span>
+              <span className="text-[#C9A227]">❤</span>
+              <span className="text-white/70 text-xs">bằng Next.js</span>
             </div>
           </div>
         </div>

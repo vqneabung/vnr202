@@ -59,7 +59,7 @@ export default function Header() {
                     onMouseEnter={() => setDropdownOpen(true)}
                     onMouseLeave={() => setDropdownOpen(false)}
                   >
-                    <button className="px-4 py-2 text-[#F5EDE0] hover:text-[#C9A227] transition-colors text-sm font-medium flex items-center gap-1 tracking-wide">
+                    <button className="px-4 py-2 text-[#F4D03F] hover:text-[#FFD700] transition-colors text-sm font-semibold flex items-center gap-1 tracking-wide" style={{ color: '#F4D03F' }}>
                       {item.name}
                       <svg
                         className={`w-4 h-4 transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
@@ -87,7 +87,8 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="px-4 py-2 text-[#F5EDE0] hover:text-[#C9A227] transition-colors text-sm font-medium tracking-wide"
+                    className="px-4 py-2 text-[#F4D03F] hover:text-[#FFD700] transition-colors text-sm font-semibold tracking-wide"
+                    style={{ color: '#F4D03F' }}
                   >
                     {item.name}
                   </Link>
@@ -98,7 +99,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-[#F5EDE0] hover:text-[#C9A227] transition-colors"
+            className="lg:hidden p-2 text-[#F4D03F] hover:text-[#FFD700] transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -119,7 +120,7 @@ export default function Header() {
                       <Link
                         key={child.name}
                         href={child.href}
-                        className="block px-6 py-2 text-[#F5EDE0] hover:text-[#C9A227] hover:bg-[#1A2D5A] transition-colors text-sm"
+                        className="block px-6 py-2 text-[#F4D03F] hover:text-[#FFD700] hover:bg-[#1A2D5A] transition-colors text-sm"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {child.name}
@@ -129,7 +130,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-4 py-2 text-[#F5EDE0] hover:text-[#C9A227] hover:bg-[#1A2D5A] transition-colors text-sm font-medium"
+                    className="block px-4 py-2 text-[#F4D03F] hover:text-[#FFD700] hover:bg-[#1A2D5A] transition-colors text-sm font-semibold"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}

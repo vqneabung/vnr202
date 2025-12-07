@@ -264,20 +264,20 @@ export default function QuizPage() {
       </section>
 
       {/* Progress Bar */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="max-w-2xl mx-auto">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-medium text-[var(--timeless-navy)]">
+      <div className="bg-white border-b shadow-sm py-6">
+        <div className="container mx-auto px-4 py-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex justify-between items-center mb-4">
+              <span className="text-base font-semibold text-[var(--timeless-navy)]">
                 Câu {currentQuestion + 1} / {quizQuestions.length}
               </span>
-              <span className="text-sm text-[var(--text-muted)]">
+              <span className="text-base font-semibold text-[var(--royal-burgundy)]">
                 Điểm: {score}
               </span>
             </div>
-            <div className="w-full bg-[var(--ancient-stone)]/30 rounded-full h-2">
+            <div className="w-full bg-gray-200 rounded-full h-3">
               <div 
-                className="h-2 rounded-full bg-gradient-to-r from-[var(--antique-gold)] to-[var(--royal-burgundy)] transition-all duration-500"
+                className="h-3 rounded-full bg-gradient-to-r from-[var(--antique-gold)] to-[var(--royal-burgundy)] transition-all duration-500"
                 style={{ width: `${progressPercentage}%` }}
               ></div>
             </div>

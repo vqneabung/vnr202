@@ -40,10 +40,10 @@ export default function Header() {
               <Star className="w-5 h-5 text-white" />
             </div>
             <div className="hidden sm:block">
-              <span className="text-[#F5EDE0] font-bold text-lg group-hover:text-[#C9A227] transition-colors" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>
+              <span className="text-white font-bold text-lg group-hover:text-[#C9A227] transition-colors" style={{ color: '#FFFFFF' }}>
                 Lịch Sử Đảng
               </span>
-              <span className="text-[#C9A227] text-xs block tracking-widest">
+              <span className="text-[#C9A227] text-xs block tracking-widest" style={{ color: '#C9A227' }}>
                 1945 — 1975
               </span>
             </div>

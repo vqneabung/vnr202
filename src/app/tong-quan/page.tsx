@@ -77,7 +77,7 @@ export default function TongQuanPage() {
               <span className="text-white/80 text-sm">1945 - 1975</span>
             </div>
             
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6" style={{ fontFamily: "var(--font-playfair), serif" }}>
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Tổng Quan Lịch Sử
             </h1>
             
@@ -97,12 +97,12 @@ export default function TongQuanPage() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--antique-gold)] to-[var(--royal-burgundy)] flex items-center justify-center">
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]" style={{ fontFamily: "var(--font-playfair), serif" }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]">
                 1. Bối Cảnh Chung
               </h2>
             </div>
             
-            <Card className="border-l-4 border-l-[var(--antique-gold)]">
+            <Card className="border-l-4 border-l-[var(--antique-gold)] bg-white">
               <CardHeader>
                 <CardTitle className="text-xl text-[var(--royal-burgundy)]">
                   Sau Cách mạng Tháng Tám 1945
@@ -113,7 +113,7 @@ export default function TongQuanPage() {
                   {context.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-[var(--rustic-olive)] flex-shrink-0 mt-0.5" />
-                      <span className="text-[var(--text-muted)]">{item}</span>
+                      <span className="text-[var(--text-secondary)]">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -131,19 +131,19 @@ export default function TongQuanPage() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--antique-gold)] to-[var(--royal-burgundy)] flex items-center justify-center">
                 <Flag className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]" style={{ fontFamily: "var(--font-playfair), serif" }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]">
                 2. Hai Cuộc Kháng Chiến Vĩ Đại
               </h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
               {/* Kháng chiến chống Pháp */}
-              <Card className="border-t-4 border-t-[var(--royal-burgundy)]">
+              <Card className="border-t-4 border-t-[var(--royal-burgundy)] bg-white">
                 <CardHeader className="bg-[var(--royal-burgundy)]/5">
                   <CardTitle className="text-lg text-[var(--royal-burgundy)]">
                     {resistanceWar1.title}
                   </CardTitle>
-                  <p className="text-sm text-[var(--text-muted)]">
+                  <p className="text-sm text-[var(--text-secondary)]">
                     <strong>Chủ trương:</strong> {resistanceWar1.policy}
                   </p>
                 </CardHeader>
@@ -155,7 +155,7 @@ export default function TongQuanPage() {
                         <span className="w-5 h-5 rounded-full bg-[var(--antique-gold)] text-white text-xs flex items-center justify-center flex-shrink-0">
                           {index + 1}
                         </span>
-                        <span className="text-[var(--text-muted)]">{item}</span>
+                        <span className="text-[var(--text-secondary)]">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -163,7 +163,7 @@ export default function TongQuanPage() {
               </Card>
 
               {/* Kháng chiến chống Mỹ */}
-              <Card className="border-t-4 border-t-[var(--antique-gold)]">
+              <Card className="border-t-4 border-t-[var(--antique-gold)] bg-white">
                 <CardHeader className="bg-[var(--antique-gold)]/5">
                   <CardTitle className="text-lg text-[var(--royal-burgundy)]">
                     {resistanceWar2.title}
@@ -176,7 +176,7 @@ export default function TongQuanPage() {
                         <span className="w-5 h-5 rounded-full bg-[var(--antique-gold)] text-white text-xs flex items-center justify-center flex-shrink-0">
                           {index + 1}
                         </span>
-                        <span className="text-[var(--text-muted)]">{item}</span>
+                        <span className="text-[var(--text-secondary)]">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -195,7 +195,7 @@ export default function TongQuanPage() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--antique-gold)] to-[var(--royal-burgundy)] flex items-center justify-center">
                 <Target className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]" style={{ fontFamily: "var(--font-playfair), serif" }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]">
                 3. Hai Nhiệm Vụ Chiến Lược
               </h2>
             </div>
@@ -208,7 +208,7 @@ export default function TongQuanPage() {
                       <div className="w-10 h-10 rounded-lg bg-[var(--timeless-navy)] flex items-center justify-center">
                         <task.icon className="w-5 h-5 text-[var(--antique-gold)]" />
                       </div>
-                      <CardTitle className="text-lg">{task.title}</CardTitle>
+                      <CardTitle className="text-lg text-[var(--timeless-navy)]">{task.title}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -216,7 +216,7 @@ export default function TongQuanPage() {
                       {task.items.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-sm">
                           <CheckCircle className="w-4 h-4 text-[var(--rustic-olive)] flex-shrink-0 mt-0.5" />
-                          <span className="text-[var(--text-muted)]">{item}</span>
+                          <span className="text-[var(--text-secondary)]">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -236,7 +236,7 @@ export default function TongQuanPage() {
               <div className="w-12 h-12 rounded-xl bg-[var(--antique-gold)] flex items-center justify-center">
                 <Users className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: "var(--font-playfair), serif" }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">
                 4. Vai Trò Của Đảng
               </h2>
             </div>
@@ -265,7 +265,7 @@ export default function TongQuanPage() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--antique-gold)] to-[var(--royal-burgundy)] flex items-center justify-center">
                 <Award className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]" style={{ fontFamily: "var(--font-playfair), serif" }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]">
                 5. Kết Quả Và Ý Nghĩa Lịch Sử
               </h2>
             </div>
@@ -278,7 +278,7 @@ export default function TongQuanPage() {
                       <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--antique-gold)] to-[var(--royal-burgundy)] flex items-center justify-center flex-shrink-0">
                         <CheckCircle className="w-4 h-4 text-white" />
                       </div>
-                      <span className="text-[var(--timeless-navy)] font-medium">{result}</span>
+                      <span className="text-[var(--text-secondary)] font-medium">{result}</span>
                     </div>
                   ))}
                 </div>

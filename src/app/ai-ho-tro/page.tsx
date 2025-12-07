@@ -85,7 +85,7 @@ export default function AIHoTroPage() {
             <div>
               <Card className="h-[600px] flex flex-col shadow-lg">
                 <CardHeader className="bg-gradient-to-r from-[var(--timeless-navy)] to-[var(--royal-burgundy)] text-white rounded-t-xl">
-                  <CardTitle className="flex items-center gap-2">
+                  <CardTitle className="flex items-center gap-2 text-white">
                     <Bot className="w-5 h-5" />
                     Chatbot Lịch Sử Đảng
                   </CardTitle>

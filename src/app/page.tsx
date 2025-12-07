@@ -68,19 +68,16 @@ export default function HomePage() {
               <span className="text-[#C9A227] text-sm font-semibold tracking-wider">1945 — 1975</span>
             </div>
             
-            <h1 
-              className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Đảng Lãnh Đạo{" "}
               <span className="text-[#C9A227]">Hai Cuộc Kháng Chiến</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-[#F5EDE0] mb-4 max-w-2xl mx-auto font-semibold tracking-wide">
+            <p className="text-lg md:text-xl text-white mb-4 max-w-2xl mx-auto font-semibold tracking-wide">
               HOÀN THÀNH GIẢI PHÓNG DÂN TỘC, THỐNG NHẤT ĐẤT NƯỚC
             </p>
             
-            <p className="text-[#F5EDE0]/80 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
               Giai đoạn 1945–1975 là thời kỳ bản lề trong lịch sử Việt Nam hiện đại. 
               Dưới sự lãnh đạo đúng đắn của Đảng Cộng sản Việt Nam, nhân dân ta đã tiến hành 
               kháng chiến toàn dân – toàn diện – lâu dài, đưa đất nước tới thắng lợi trọn vẹn.
@@ -93,7 +90,7 @@ export default function HomePage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-[#F5EDE0] text-[#F5EDE0] hover:bg-[#F5EDE0] hover:text-[#0F1C3F]">
+              <Button asChild size="lg" className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F1C3F] font-semibold" style={{ borderColor: '#FFFFFF', color: '#FFFFFF', backgroundColor: 'transparent' }}>
                 <Link href="/quiz">Kiểm Tra Kiến Thức</Link>
               </Button>
             </div>
@@ -105,10 +102,7 @@ export default function HomePage() {
       <section className="py-16 md:py-24" style={{ backgroundColor: "#F5EDE0" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 
-              className="text-3xl md:text-4xl font-bold text-[#0F1C3F] mb-6"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F1C3F] mb-6">
               Giới Thiệu Tổng Quan
             </h2>
             <p className="text-[#3D3D3D] leading-relaxed text-lg">
@@ -122,7 +116,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature) => (
               <Link key={feature.title} href={feature.href}>
-                <Card className="h-full cursor-pointer group">
+                <Card className="h-full cursor-pointer group bg-white border border-[#D4C8B5]">
                   <CardHeader>
                     <div 
                       className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
@@ -157,10 +151,7 @@ export default function HomePage() {
                 <span className="text-[#8B1A1A] text-sm font-semibold">Vai Trò Lãnh Đạo</span>
               </div>
               
-              <h2 
-                className="text-3xl md:text-4xl font-bold text-[#0F1C3F] mb-6"
-                style={{ fontFamily: "Georgia, serif" }}
-              >
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F1C3F] mb-6">
                 Vai Trò Của Đảng Trong{" "}
                 <span className="text-[#8B1A1A]">Hai Cuộc Kháng Chiến</span>
               </h2>
@@ -197,8 +188,8 @@ export default function HomePage() {
                 className="absolute -bottom-6 -left-6 p-5 rounded-lg shadow-xl"
                 style={{ backgroundColor: "#0F1C3F", border: "2px solid #C9A227" }}
               >
-                <p className="text-[#C9A227] font-bold text-3xl" style={{ fontFamily: "Georgia, serif" }}>30</p>
-                <p className="text-sm text-[#F5EDE0]">năm kháng chiến</p>
+                <p className="text-[#C9A227] font-bold text-3xl">30</p>
+                <p className="text-sm text-white">năm kháng chiến</p>
               </div>
             </div>
           </div>
@@ -209,10 +200,7 @@ export default function HomePage() {
       <section className="py-16 md:py-24" style={{ backgroundColor: "#E8DCC8" }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 
-              className="text-3xl md:text-4xl font-bold text-[#0F1C3F] mb-4"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F1C3F] mb-4">
               Những Mốc Lịch Sử Quan Trọng
             </h2>
           </div>
@@ -225,10 +213,7 @@ export default function HomePage() {
                   className="bg-white rounded-lg p-5 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                   style={{ borderBottom: "4px solid #C9A227" }}
                 >
-                  <p 
-                    className="text-3xl font-bold text-[#8B1A1A] mb-2"
-                    style={{ fontFamily: "Georgia, serif" }}
-                  >
+                  <p className="text-3xl font-bold text-[#8B1A1A] mb-2">
                     {item.year}
                   </p>
                   <p className="text-xs text-[#3D3D3D] font-medium leading-snug">{item.event}</p>
@@ -246,20 +231,17 @@ export default function HomePage() {
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 
-              className="text-3xl md:text-4xl font-bold text-[#F5EDE0] mb-6"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ý Nghĩa Đối Với Người Học
             </h2>
-            <p className="text-[#F5EDE0]/90 mb-10 text-lg">
+            <p className="text-white/90 mb-10 text-lg">
               Trang web cung cấp kiến thức trọng tâm, mạch lạc, hỗ trợ sinh viên nắm vững:
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div 
                 className="rounded-lg p-6"
-                style={{ backgroundColor: "rgba(245, 237, 224, 0.1)", border: "1px solid rgba(201, 162, 39, 0.3)" }}
+                style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", border: "1px solid rgba(201, 162, 39, 0.3)" }}
               >
                 <div 
                   className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
@@ -267,13 +249,13 @@ export default function HomePage() {
                 >
                   <BookOpen className="w-6 h-6 text-[#0F1C3F]" />
                 </div>
-                <h3 className="text-[#F5EDE0] font-bold mb-2 text-lg">Quá Trình Lãnh Đạo</h3>
-                <p className="text-[#F5EDE0]/70 text-sm leading-relaxed">Đảng lãnh đạo cách mạng từ 1945–1975</p>
+                <h3 className="text-white font-bold mb-2 text-lg">Quá Trình Lãnh Đạo</h3>
+                <p className="text-white/80 text-sm leading-relaxed">Đảng lãnh đạo cách mạng từ 1945–1975</p>
               </div>
               
               <div 
                 className="rounded-lg p-6"
-                style={{ backgroundColor: "rgba(245, 237, 224, 0.1)", border: "1px solid rgba(201, 162, 39, 0.3)" }}
+                style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", border: "1px solid rgba(201, 162, 39, 0.3)" }}
               >
                 <div 
                   className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
@@ -281,13 +263,13 @@ export default function HomePage() {
                 >
                   <Flag className="w-6 h-6 text-[#0F1C3F]" />
                 </div>
-                <h3 className="text-[#F5EDE0] font-bold mb-2 text-lg">Hai Nhiệm Vụ</h3>
-                <p className="text-[#F5EDE0]/70 text-sm leading-relaxed">Xây dựng CNXH – Giải phóng miền Nam</p>
+                <h3 className="text-white font-bold mb-2 text-lg">Hai Nhiệm Vụ</h3>
+                <p className="text-white/80 text-sm leading-relaxed">Xây dựng CNXH – Giải phóng miền Nam</p>
               </div>
               
               <div 
                 className="rounded-lg p-6"
-                style={{ backgroundColor: "rgba(245, 237, 224, 0.1)", border: "1px solid rgba(201, 162, 39, 0.3)" }}
+                style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", border: "1px solid rgba(201, 162, 39, 0.3)" }}
               >
                 <div 
                   className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
@@ -295,8 +277,8 @@ export default function HomePage() {
                 >
                   <Award className="w-6 h-6 text-[#0F1C3F]" />
                 </div>
-                <h3 className="text-[#F5EDE0] font-bold mb-2 text-lg">Bài Học Lịch Sử</h3>
-                <p className="text-[#F5EDE0]/70 text-sm leading-relaxed">Những giá trị lâu dài cho thế hệ sau</p>
+                <h3 className="text-white font-bold mb-2 text-lg">Bài Học Lịch Sử</h3>
+                <p className="text-white/80 text-sm leading-relaxed">Những giá trị lâu dài cho thế hệ sau</p>
               </div>
             </div>
             

@@ -76,7 +76,7 @@ export default function KhangChienChongPhapPage() {
               <span className="text-white/80 text-sm">1945 - 1954</span>
             </div>
             
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6" style={{ fontFamily: "var(--font-playfair), serif" }}>
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Lãnh Đạo Xây Dựng, Bảo Vệ Chính Quyền <br />
               <span className="text-[var(--antique-gold)]">Và Kháng Chiến Chống Pháp</span>
             </h1>
@@ -97,16 +97,16 @@ export default function KhangChienChongPhapPage() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--antique-gold)] to-[var(--royal-burgundy)] flex items-center justify-center">
                 <Shield className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]" style={{ fontFamily: "var(--font-playfair), serif" }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]">
                 1. Xây Dựng Và Bảo Vệ Chính Quyền (1945–1946)
               </h2>
             </div>
             
             <div className="grid lg:grid-cols-3 gap-6">
               {/* Khó khăn */}
-              <Card className="border-t-4 border-t-[var(--royal-burgundy)]">
+              <Card className="border-t-4 border-t-[var(--royal-burgundy)] bg-white">
                 <CardHeader className="bg-[var(--royal-burgundy)]/5">
-                  <CardTitle className="text-lg flex items-center gap-2">
+                  <CardTitle className="text-lg flex items-center gap-2 text-[var(--royal-burgundy)]">
                     <span className="w-8 h-8 rounded-full bg-[var(--royal-burgundy)] text-white text-sm flex items-center justify-center">a</span>
                     Khó Khăn
                   </CardTitle>
@@ -116,7 +116,7 @@ export default function KhangChienChongPhapPage() {
                     {difficulties.map((item, index) => (
                       <li key={index} className="flex items-start gap-2 text-sm">
                         <span className="w-1.5 h-1.5 rounded-full bg-[var(--royal-burgundy)] mt-2 flex-shrink-0"></span>
-                        <span className="text-[var(--text-muted)]">{item}</span>
+                        <span className="text-[var(--text-secondary)]">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -124,9 +124,9 @@ export default function KhangChienChongPhapPage() {
               </Card>
 
               {/* Chủ trương */}
-              <Card className="border-t-4 border-t-[var(--antique-gold)]">
+              <Card className="border-t-4 border-t-[var(--antique-gold)] bg-white">
                 <CardHeader className="bg-[var(--antique-gold)]/5">
-                  <CardTitle className="text-lg flex items-center gap-2">
+                  <CardTitle className="text-lg flex items-center gap-2 text-[var(--timeless-navy)]">
                     <span className="w-8 h-8 rounded-full bg-[var(--antique-gold)] text-white text-sm flex items-center justify-center">b</span>
                     Chủ Trương Của Đảng
                   </CardTitle>
@@ -136,7 +136,7 @@ export default function KhangChienChongPhapPage() {
                     {partyPolicies1.map((item, index) => (
                       <li key={index} className="flex items-start gap-2 text-sm">
                         <CheckCircle className="w-4 h-4 text-[var(--rustic-olive)] flex-shrink-0 mt-0.5" />
-                        <span className="text-[var(--text-muted)]">{item}</span>
+                        <span className="text-[var(--text-secondary)]">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -144,9 +144,9 @@ export default function KhangChienChongPhapPage() {
               </Card>
 
               {/* Kết quả */}
-              <Card className="border-t-4 border-t-[var(--rustic-olive)]">
+              <Card className="border-t-4 border-t-[var(--rustic-olive)] bg-white">
                 <CardHeader className="bg-[var(--rustic-olive)]/5">
-                  <CardTitle className="text-lg flex items-center gap-2">
+                  <CardTitle className="text-lg flex items-center gap-2 text-[var(--rustic-olive)]">
                     <span className="w-8 h-8 rounded-full bg-[var(--rustic-olive)] text-white text-sm flex items-center justify-center">c</span>
                     Kết Quả
                   </CardTitle>
@@ -156,7 +156,7 @@ export default function KhangChienChongPhapPage() {
                     {results1.map((item, index) => (
                       <li key={index} className="flex items-start gap-2 text-sm">
                         <Award className="w-4 h-4 text-[var(--antique-gold)] flex-shrink-0 mt-0.5" />
-                        <span className="text-[var(--text-muted)]">{item}</span>
+                        <span className="text-[var(--text-secondary)]">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -175,27 +175,27 @@ export default function KhangChienChongPhapPage() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--antique-gold)] to-[var(--royal-burgundy)] flex items-center justify-center">
                 <Flag className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]" style={{ fontFamily: "var(--font-playfair), serif" }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]">
                 2. Đường Lối Kháng Chiến Toàn Quốc (1946–1950)
               </h2>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
-                <Card className="mb-6 border-l-4 border-l-[var(--royal-burgundy)]">
+                <Card className="mb-6 border-l-4 border-l-[var(--royal-burgundy)] bg-[var(--card-background)]">
                   <CardHeader>
                     <CardTitle className="text-lg text-[var(--royal-burgundy)]">
                       Hoàn Cảnh Bùng Nổ Kháng Chiến
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-[var(--text-muted)]">
+                    <p className="text-[var(--text-secondary)]">
                       Pháp tái xâm lược, Hiệp định Sơ bộ và Tạm ước bị phá vỡ → chiến tranh không thể tránh khỏi.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card className="border-l-4 border-l-[var(--antique-gold)]">
+                <Card className="border-l-4 border-l-[var(--antique-gold)] bg-[var(--card-background)]">
                   <CardHeader>
                     <CardTitle className="text-lg text-[var(--antique-gold)]">Đường Lối</CardTitle>
                   </CardHeader>
@@ -204,7 +204,7 @@ export default function KhangChienChongPhapPage() {
                       {resistanceLine.map((item, index) => (
                         <li key={index} className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-[var(--rustic-olive)] flex-shrink-0 mt-0.5" />
-                          <span className="text-[var(--text-muted)]">{item}</span>
+                          <span className="text-[var(--text-secondary)]">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -246,15 +246,15 @@ export default function KhangChienChongPhapPage() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--antique-gold)] to-[var(--royal-burgundy)] flex items-center justify-center">
                 <Award className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]" style={{ fontFamily: "var(--font-playfair), serif" }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]">
                 3. Đẩy Mạnh Kháng Chiến Đến Thắng Lợi (1951–1954)
               </h2>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-6 mb-8">
-              <Card>
+              <Card className="bg-white">
                 <CardHeader className="bg-[var(--royal-burgundy)]/5">
-                  <CardTitle className="text-lg">Đại Hội II (1951)</CardTitle>
+                  <CardTitle className="text-lg text-[var(--timeless-navy)]">Đại Hội II (1951)</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-4">
                   <ul className="space-y-2">
@@ -263,16 +263,16 @@ export default function KhangChienChongPhapPage() {
                         <span className="w-5 h-5 rounded-full bg-[var(--antique-gold)] text-white text-xs flex items-center justify-center flex-shrink-0">
                           {index + 1}
                         </span>
-                        <span className="text-[var(--text-muted)]">{item}</span>
+                        <span className="text-[var(--text-secondary)]">{item}</span>
                       </li>
                     ))}
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-white">
                 <CardHeader className="bg-[var(--antique-gold)]/5">
-                  <CardTitle className="text-lg">Phát Triển Lực Lượng</CardTitle>
+                  <CardTitle className="text-lg text-[var(--timeless-navy)]">Phát Triển Lực Lượng</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-4">
                   <ul className="space-y-2">
@@ -281,7 +281,7 @@ export default function KhangChienChongPhapPage() {
                         <span className="w-5 h-5 rounded-full bg-[var(--rustic-olive)] text-white text-xs flex items-center justify-center flex-shrink-0">
                           {index + 1}
                         </span>
-                        <span className="text-[var(--text-muted)]">{item}</span>
+                        <span className="text-[var(--text-secondary)]">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -331,13 +331,13 @@ export default function KhangChienChongPhapPage() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--antique-gold)] to-[var(--royal-burgundy)] flex items-center justify-center">
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]" style={{ fontFamily: "var(--font-playfair), serif" }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--timeless-navy)]">
                 4. Ý Nghĩa Và Kinh Nghiệm Lãnh Đạo
               </h2>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
-              <Card className="border-l-4 border-l-[var(--royal-burgundy)]">
+              <Card className="border-l-4 border-l-[var(--royal-burgundy)] bg-white">
                 <CardHeader>
                   <CardTitle className="text-xl text-[var(--royal-burgundy)]">Ý Nghĩa Lịch Sử</CardTitle>
                 </CardHeader>
@@ -353,7 +353,7 @@ export default function KhangChienChongPhapPage() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-[var(--antique-gold)]">
+              <Card className="border-l-4 border-l-[var(--antique-gold)] bg-white">
                 <CardHeader>
                   <CardTitle className="text-xl text-[var(--antique-gold)]">Kinh Nghiệm</CardTitle>
                 </CardHeader>

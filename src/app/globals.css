@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Historical Color Palette */
+  --antique-gold: #C9A227;
+  --ancient-stone: #6B6560;
+  --royal-burgundy: #8B1A1A;
+  --timeless-navy: #0F1C3F;
+  --rustic-olive: #4A5D23;
+  --antique-parchment: #F5EDE0;
+  --parchment-dark: #E8DCC8;
+  --sepia: #704214;
+  --ink-black: #1A1A1A;
+
+  /* Text colors */
+  --text-primary: #1A1A1A;
+  --text-secondary: #3D3D3D;
+  --text-muted: #5A5A5A;
+  --text-on-dark: #F5EDE0;
+
+  /* Semantic colors */
+  --background: var(--antique-parchment);
+  --foreground: var(--text-primary);
+  --card-background: #FFFDF8;
+  --card-border: #D4C8B5;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-source-sans);
+  --font-serif: var(--font-playfair);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--timeless-navy);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+/* Links */
+a {
+  color: var(--royal-burgundy);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--antique-gold);
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Selection */
+::selection {
+  background: var(--antique-gold);
+  color: var(--timeless-navy);
 }

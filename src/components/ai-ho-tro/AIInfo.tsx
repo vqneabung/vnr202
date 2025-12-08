@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const aiTools = [
   { name: "ChatGPT", description: "Gợi ý ý tưởng, mở rộng nội dung" },
-  { name: "Google Gemini", description: "Phân tích cấu trúc văn bản" },
   { name: "AI Tools", description: "Kiểm tra ngữ pháp và chính tả" },
 ];
 
@@ -46,7 +45,7 @@ export default function AIInfo() {
               <BookOpen className="w-6 h-6" />
               Công Cụ AI Sử Dụng
             </h2>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {aiTools.map((tool, index) => (
                 <Card key={index}>
                   <CardHeader>

@@ -13,7 +13,7 @@ export default function Chatbot() {
 
   const { messages, sendMessage, status, setMessages } = useChat({
     transport: new DefaultChatTransport({
-      api: "/api/chatbot",
+      api: "/api/chat",
     }),
   });
 
@@ -79,7 +79,7 @@ export default function Chatbot() {
                   </div>
                 ))}
 
-                {status === "streaming" && (
+                {(status === "streaming" || status === "submitted") && (
                   <div className="flex gap-3">
                     <div className="w-8 h-8 rounded-full bg-[var(--antique-gold)] flex items-center justify-center">
                       <Loader2 className="w-5 h-5 text-white animate-spin" />

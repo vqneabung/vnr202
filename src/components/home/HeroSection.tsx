@@ -9,7 +9,7 @@ export default function HeroSection() {
     >
       {/* Background Image Frame */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
         <img 
           src="https://file3.qdnd.vn/data/images/0/2024/08/19/upload_1021/cach%20mang%20thang%208%20a1.jpg?dpi=150&quality=100&w=870" /* TODO: Add background image URL here */
           alt="Background"

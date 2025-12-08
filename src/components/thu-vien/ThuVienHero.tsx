@@ -5,7 +5,7 @@ export default function ThuVienHero() {
     <section className="relative py-16 md:py-24 overflow-hidden">
       {/* Background Image Frame */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
         <img 
           src="https://images.baodantoc.vn/uploads/2021/Th%C3%A1ng_12/Ng%C3%A0y_18/Nga/82F2C31D-4736-4A67-957E-BC39E1A49C10.jpg" /* TODO: Add background image URL here */
           alt="Background"

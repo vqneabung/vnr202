@@ -10,7 +10,7 @@ export default function YNghiaHero() {
           alt="Bác Hồ với thanh niên"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
       <div className="container relative z-10 mx-auto px-4">

@@ -10,7 +10,7 @@ export default function KhangChienChongMyPage() {
       <KhangChienMyHero />
       <NorthConstruction />
       <SouthRevolution />
-      <HoChiMinhCampaign />
+      {/* <HoChiMinhCampaign /> */}
       <VictorySignificance />
     </div>
   );

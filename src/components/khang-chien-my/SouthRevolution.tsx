@@ -1,3 +1,5 @@
+"use client";
+
 import { Flag, Zap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -8,11 +10,36 @@ const southPolicy = [
 ];
 
 const keyPhases = [
-  { year: "1959-1960", name: "Đồng Khởi", desc: "Phong trào nổi dậy toàn miền Nam" },
-  { year: "1968", name: "Tổng tiến công Mậu Thân", desc: "Thay đổi cục diện chiến tranh" },
-  { year: "1971", name: "Chiến thắng Đường 9 – Nam Lào", desc: "Đánh bại cuộc hành quân Lam Sơn 719" },
-  { year: "1972", name: "\"Điện Biên Phủ trên không\"", desc: "Đập tan cuộc tập kích B-52" },
-  { year: "1975", name: "Tổng tiến công mùa Xuân", desc: "Giải phóng hoàn toàn miền Nam" },
+  { 
+    year: "1959-1960", 
+    name: "Đồng Khởi", 
+    desc: "Phong trào nổi dậy toàn miền Nam",
+    image: "https://image.sggp.org.vn/w1000/Uploaded/2025/ohpohuo/2020_01_06/f6b_GUSY.jpg.webp" 
+  },
+  { 
+    year: "1968", 
+    name: "Tổng tiến công Mậu Thân", 
+    desc: "Thay đổi cục diện chiến tranh",
+    image: "https://file3.qdnd.vn/data/images/0/2024/11/11/upload_2059/mau%20than%201968.jpg?dpi=150&quality=100&w=870" 
+  },
+  { 
+    year: "1971", 
+    name: "Chiến thắng Đường 9 – Nam Lào", 
+    desc: "Đánh bại cuộc hành quân Lam Sơn 719",
+    image: "https://file3.qdnd.vn/data/images/0/2024/11/17/upload_2087/doi_khong_ten.jpg" 
+  },
+  { 
+    year: "1972", 
+    name: "\"Điện Biên Phủ trên không\"", 
+    desc: "Đập tan cuộc tập kích B-52",
+    image: "https://file3.qdnd.vn/data/images/0/2025/04/27/upload_2134/1.png?dpi=150&quality=100&w=870" 
+  },
+  { 
+    year: "1975", 
+    name: "Tổng tiến công mùa Xuân", 
+    desc: "Giải phóng hoàn toàn miền Nam",
+    image: "https://dbndnghean.vn/dbndna-media/23/4/30/them-tieu-de-1682706046023.jpg"
+  },
 ];
 
 export default function SouthRevolution() {
@@ -55,6 +82,21 @@ export default function SouthRevolution() {
                   <div className="absolute left-4 top-2 w-5 h-5 rounded-full bg-[var(--antique-gold)] border-4 border-white shadow-md"></div>
                   <Card className="hover:shadow-lg transition-shadow">
                     <CardContent className="py-4">
+                      {phase.image && (
+                        <div className="mb-4 text-center">
+                          <div className="relative aspect-video w-full overflow-hidden rounded-lg mx-auto">
+                            <img 
+                              src={phase.image} 
+                              alt={phase.name}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                              onError={(e) => {
+                                e.currentTarget.style.display = 'none'; // Hide broken images
+                              }}
+                            />
+                          </div>
+                        </div>
+                      )}
+                      
                       <div className="flex flex-col md:flex-row md:items-center gap-2">
                         <span className="text-sm font-bold text-[var(--royal-burgundy)] bg-[var(--royal-burgundy)]/10 px-2 py-1 rounded">
                           {phase.year}

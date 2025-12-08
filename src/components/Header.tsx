@@ -56,10 +56,11 @@ export default function Header() {
                 {item.children ? (
                   <div
                     className="relative"
-                    onMouseEnter={() => setDropdownOpen(true)}
-                    onMouseLeave={() => setDropdownOpen(false)}
                   >
-                    <button className="px-4 py-2 text-[#F4D03F] hover:text-[#FFD700] transition-colors text-sm font-semibold flex items-center gap-1 tracking-wide" style={{ color: '#F4D03F' }}>
+                    <button 
+                      onClick={() => setDropdownOpen(!dropdownOpen)}
+                      className="px-4 py-2 text-[#F4D03F] hover:text-[#FFD700] transition-colors text-sm font-semibold flex items-center gap-1 tracking-wide" style={{ color: '#F4D03F' }}
+                    >
                       {item.name}
                       <svg
                         className={`w-4 h-4 transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
@@ -77,6 +78,7 @@ export default function Header() {
                             key={child.name}
                             href={child.href}
                             className="block px-4 py-3 text-sm text-[#0F1C3F] hover:bg-[#F5EDE0] hover:text-[#8B1A1A] transition-colors border-l-4 border-transparent hover:border-[#C9A227] font-medium"
+                            onClick={() => setDropdownOpen(false)}
                           >
                             {child.name}
                           </Link>

@@ -2,7 +2,7 @@ import { BookOpen, CheckCircle, AlertCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const aiTools = [
-  { name: "ChatGPT", description: "Gợi ý ý tưởng, mở rộng nội dung" },
+  { name: "ChatGPT", description: "Tổng hợp và xử lý thông tin nhanh chóng từ nhiều nguồn" },
   { name: "AI Tools", description: "Kiểm tra ngữ pháp và chính tả" },
 ];
 

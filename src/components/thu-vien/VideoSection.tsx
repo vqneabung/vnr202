@@ -1,17 +1,17 @@
 const videos = [
   {
     title: "Chiến Thắng Điện Biên Phủ",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "jy7Z3oYOp7w",
     description: "Tài liệu về chiến dịch Điện Biên Phủ lừng lẫy",
   },
   {
     title: "Đại Thắng Mùa Xuân 1975",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "aqMp24oZJa8",
     description: "Chiến dịch Hồ Chí Minh giải phóng hoàn toàn miền Nam",
   },
   {
     title: "Lịch Sử Đảng 1945-1975",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "mZ99SMWT61w",
     description: "Tổng quan về vai trò lãnh đạo của Đảng",
   },
 ];

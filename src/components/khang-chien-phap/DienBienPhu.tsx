@@ -29,6 +29,13 @@ export default function DienBienPhu() {
                 góp phần vào phong trào giải phóng dân tộc thế giới.
               </p>
             </CardContent>
+            <div className="relative h-64 md:h-auto w-full overflow-hidden rounded-b-xl">
+               <img 
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Victory_in_Battle_of_Dien_Bien_Phu.jpg/1200px-Victory_in_Battle_of_Dien_Bien_Phu.jpg"
+                 alt="Chiến thắng Điện Biên Phủ"
+                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+               />
+            </div>
           </Card>
         </div>
       </div>

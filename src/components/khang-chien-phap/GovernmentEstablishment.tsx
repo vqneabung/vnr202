@@ -31,7 +31,14 @@ export default function GovernmentEstablishment() {
                   </li>
                 ))}
               </ul>
-            </CardContent>
+              </CardContent>
+              <div className="relative h-64 md:h-auto w-full overflow-hidden rounded-b-xl">
+                 <img 
+                   src="https://media.vov.vn/sites/default/files/styles/large/public/2023-09/bac_ho.jpg"
+                   alt="Bác Hồ đọc tuyên ngôn độc lập"
+                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                 />
+              </div>
           </Card>
         </div>
       </div>

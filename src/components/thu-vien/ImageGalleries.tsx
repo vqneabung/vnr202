@@ -2,9 +2,9 @@ const galleries = [
   {
     title: "Chiến Dịch Điện Biên Phủ (1954)",
     images: [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Dien_Bien_Phu_caserne_1.jpg/1200px-Dien_Bien_Phu_caserne_1.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Dien_Bien_Phu_Monument.jpg/1200px-Dien_Bien_Phu_Monument.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Dien_Bien_Phu_Museum.jpg/1200px-Dien_Bien_Phu_Museum.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Victory_in_Battle_of_Dien_Bien_Phu.jpg/1200px-Victory_in_Battle_of_Dien_Bien_Phu.jpg",
+      "https://cdnphoto.dantri.com.vn/QFly3Dp3XkOSjUFCcWDhc73KD8Q=/thumb_w/1920/2024/05/03/4-1714728104301.jpg",
+      "https://special.vietnamplus.vn/wp-content/uploads/2021/03/ttxvn0405di-1588579648-32-1568x1107.jpg",
     ],
   },
   {
@@ -18,9 +18,9 @@ const galleries = [
   {
     title: "Hình Ảnh Lịch Sử Khác",
     images: [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Ho_Chi_Minh_1946.jpg/800px-Ho_Chi_Minh_1946.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Declaration_of_Independence_of_Vietnam.jpg/1200px-Declaration_of_Independence_of_Vietnam.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Viet_Minh_flag.svg/1200px-Viet_Minh_flag.svg.png",
+      "https://vnn-imgs-f.vgcloud.vn/2021/09/01/22/tuyen-ngon-1.jpeg?width=260&s=EF6k5fkGgKSMaxZWJcbyag",
+      "https://file3.qdnd.vn/data/images/0/2024/11/11/upload_2059/mau%20than%201968.jpg",
+      "https://file3.qdnd.vn/data/images/0/2021/12/16/thuyanh/bac%20ho%20voi%20thanh%20nien.jpg?dpi=150&quality=100&w=870",
     ],
   },
 ];

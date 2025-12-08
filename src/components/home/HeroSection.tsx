@@ -26,13 +26,13 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6">
-            <Clock className="w-4 h-4 text-white/90" />
-            <span className="text-white/90 text-sm font-semibold tracking-wider">1945 — 1975</span>
+            <Clock className="w-4 h-4 text-[#C9A227]" />
+            <span className="text-[#C9A227] text-sm font-semibold tracking-wider">1945 — 1975</span>
           </div>
           
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Đảng Lãnh Đạo{" "}
-            <span className="text-gray-300">Hai Cuộc Kháng Chiến</span>
+            <span className="text-[#C9A227]">Hai Cuộc Kháng Chiến</span>
           </h1>
           
           <p className="text-lg md:text-xl text-white mb-4 max-w-2xl mx-auto font-semibold tracking-wide">

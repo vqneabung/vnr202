@@ -6,24 +6,33 @@ export default function HeroSection() {
   return (
     <section 
       className="relative overflow-hidden py-20 md:py-32"
-      style={{ background: "linear-gradient(135deg, #0F1C3F 0%, #1A2D5A 50%, #8B1A1A 100%)" }}
     >
-      {/* Decorative top border */}
+      {/* Background Image Frame */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <img 
+          src="https://file3.qdnd.vn/data/images/0/2024/08/19/upload_1021/cach%20mang%20thang%208%20a1.jpg?dpi=150&quality=100&w=870" /* TODO: Add background image URL here */
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Decorative top border - kept on top of image but below content? Or just z-index handling */}
       <div 
-        className="absolute top-0 left-0 right-0 h-1" 
+        className="absolute top-0 left-0 right-0 h-1 z-20" 
         style={{ background: "linear-gradient(90deg, #8B1A1A, #C9A227, #8B1A1A)" }}
       />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6">
-            <Clock className="w-4 h-4 text-[#C9A227]" />
-            <span className="text-[#C9A227] text-sm font-semibold tracking-wider">1945 — 1975</span>
+            <Clock className="w-4 h-4 text-white/90" />
+            <span className="text-white/90 text-sm font-semibold tracking-wider">1945 — 1975</span>
           </div>
           
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Đảng Lãnh Đạo{" "}
-            <span className="text-[#C9A227]">Hai Cuộc Kháng Chiến</span>
+            <span className="text-gray-300">Hai Cuộc Kháng Chiến</span>
           </h1>
           
           <p className="text-lg md:text-xl text-white mb-4 max-w-2xl mx-auto font-semibold tracking-wide">

@@ -2,8 +2,18 @@ import { Clock } from "lucide-react";
 
 export default function KhangChienPhapHero() {
   return (
-    <section className="bg-gradient-to-br from-[var(--royal-burgundy)] to-[var(--timeless-navy)] py-16 md:py-24">
-      <div className="container mx-auto px-4">
+    <section className="relative py-16 md:py-24 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Victory_in_Battle_of_Dien_Bien_Phu.jpg/1200px-Victory_in_Battle_of_Dien_Bien_Phu.jpg"
+          alt="Chiến thắng Điện Biên Phủ"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
+
+      <div className="container relative z-10 mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
             <Clock className="w-4 h-4 text-[var(--antique-gold)]" />

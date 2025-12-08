@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <img 
-          src="https://file3.qdnd.vn/data/images/0/2024/08/19/upload_1021/cach%20mang%20thang%208%20a1.jpg?dpi=150&quality=100&w=870" /* TODO: Add background image URL here */
+          src="https://tapchilichsudang.vn/pic/AboutUs/images/2cb5b0f57bc1be148ac5f6170fb8b93a-ttxvn_giai_phong_mien_nam_2.jpg" /* TODO: Add background image URL here */
           alt="Background"
           className="w-full h-full object-cover"
         />

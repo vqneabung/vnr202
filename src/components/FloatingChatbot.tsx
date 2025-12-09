@@ -175,37 +175,50 @@ export default function FloatingChatbot() {
             )}
 
             {/* Messages */}
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={`flex gap-3 message-fade-in ${
-                  message.role === "user" ? "justify-end" : "justify-start"
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {message.role === "assistant" && (
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A227] to-[#a88620] flex items-center justify-center flex-shrink-0 shadow-md">
-                    <Bot className="w-4 h-4 text-white" />
-                  </div>
-                )}
+            {messages.map((message, index) => {
+              // Lấy text content từ message
+              const textContent = message.parts
+                ?.filter((part: any) => part.type === "text" || part.text)
+                .map((part: any) => part.text)
+                .join("") || "";
+              
+              // Bỏ qua message assistant rỗng (đang streaming)
+              if (message.role === "assistant" && !textContent) {
+                return null;
+              }
+
+              return (
                 <div
-                  className={`max-w-[80%] rounded-2xl p-3.5 shadow-sm ${
-                    message.role === "user"
-                      ? "bg-gradient-to-br from-[#0F1C3F] to-[#1a2d5a] text-white rounded-br-md"
-                      : "bg-white border border-gray-100 rounded-bl-md"
+                  key={index}
+                  className={`flex gap-3 message-fade-in ${
+                    message.role === "user" ? "justify-end" : "justify-start"
                   }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <p className="text-sm leading-relaxed whitespace-pre-wrap">
-                    {message.parts.map((part: any) => part.text).join("")}
-                  </p>
-                </div>
-                {message.role === "user" && (
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#8B1A1A] to-[#6d1414] flex items-center justify-center flex-shrink-0 shadow-md">
-                    <User className="w-4 h-4 text-white" />
+                  {message.role === "assistant" && (
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A227] to-[#a88620] flex items-center justify-center flex-shrink-0 shadow-md">
+                      <Bot className="w-4 h-4 text-white" />
+                    </div>
+                  )}
+                  <div
+                    className={`max-w-[80%] rounded-2xl p-3.5 shadow-sm ${
+                      message.role === "user"
+                        ? "bg-gradient-to-br from-[#0F1C3F] to-[#1a2d5a] text-white rounded-br-md"
+                        : "bg-white border border-gray-100 rounded-bl-md"
+                    }`}
+                  >
+                    <p className="text-sm leading-relaxed whitespace-pre-wrap">
+                      {textContent}
+                    </p>
                   </div>
-                )}
-              </div>
-            ))}
+                  {message.role === "user" && (
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#8B1A1A] to-[#6d1414] flex items-center justify-center flex-shrink-0 shadow-md">
+                      <User className="w-4 h-4 text-white" />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
 
             {/* Typing indicator - only show when submitted, not streaming */}
             {status === "submitted" && (

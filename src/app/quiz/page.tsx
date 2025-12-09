@@ -59,8 +59,10 @@ export default function QuizPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--antique-parchment)]">
+    <div className="min-h-screen bg-gradient-to-b from-[#f8f9fa] to-white">
       <QuizHero />
+      {/* Spacer */}
+      <div className="h-6 bg-gradient-to-b from-[#0F1C3F] to-transparent"></div>
       <QuizProgress 
         currentQuestion={currentQuestion}
         totalQuestions={quizQuestions.length}

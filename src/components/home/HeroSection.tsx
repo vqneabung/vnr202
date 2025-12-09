@@ -74,46 +74,46 @@ export default function HeroSection() {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-8 mb-8 md:mb-12 px-2">
             {heroStats.map((stat, idx) => (
               <div 
                 key={idx}
-                className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/20
+                className="flex items-center gap-2 md:gap-3 bg-white/10 backdrop-blur-md px-3 md:px-6 py-2 md:py-4 rounded-xl md:rounded-2xl border border-white/20
                            hover:bg-white/20 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#C9A227] to-[#8B6914] flex items-center justify-center">
-                  <stat.icon className="w-6 h-6 text-white" />
+                <div className="w-9 h-9 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-gradient-to-br from-[#C9A227] to-[#8B6914] flex items-center justify-center flex-shrink-0">
+                  <stat.icon className="w-4 h-4 md:w-6 md:h-6 text-white" />
                 </div>
                 <div className="text-left">
-                  <p className="text-2xl md:text-3xl font-bold text-white">{stat.value}</p>
-                  <p className="text-white/60 text-sm">{stat.label}</p>
+                  <p className="text-lg md:text-3xl font-bold text-white">{stat.value}</p>
+                  <p className="text-white/60 text-xs md:text-sm">{stat.label}</p>
                 </div>
               </div>
             ))}
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0 pb-24 md:pb-0">
             <Button asChild size="lg" className="gap-2 bg-gradient-to-r from-[#C9A227] to-[#8B6914] hover:from-[#8B6914] hover:to-[#C9A227]
-                                                   px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                                                   px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
               <Link href="/tong-quan">
-                Khám Phá Lịch Sử
-                <ArrowRight className="w-5 h-5" />
+                <span>Khám Phá Lịch Sử</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
               </Link>
             </Button>
             <Button asChild size="lg" className="gap-2 bg-gradient-to-r from-[#C9A227] to-[#8B6914] hover:from-[#8B6914] hover:to-[#C9A227]
-                                                   px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                                                   px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
               <Link href="/quiz">
-                <Star className="w-5 h-5" />
-                Kiểm Tra Kiến Thức
+                <Star className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                <span>Kiểm Tra Kiến Thức</span>
               </Link>
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-28 md:bottom-32 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce">
+      {/* Scroll Down Indicator - Hidden on mobile */}
+      <div className="hidden md:flex absolute bottom-32 left-1/2 -translate-x-1/2 z-20 flex-col items-center gap-2 animate-bounce">
         <span className="text-white/60 text-xs tracking-widest uppercase">Cuộn xuống</span>
         <div className="w-8 h-12 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
           <ChevronDown className="w-4 h-4 text-[#C9A227] animate-pulse" />

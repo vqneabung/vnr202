@@ -14,7 +14,7 @@ export default function DienBienPhu() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="relative order-2 lg:order-1">
+            <div className="relative order-2 lg:order-1 mb-16">
               <div className="absolute -inset-4 bg-gradient-to-br from-[#C9A227]/20 to-[#8B1A1A]/20 rounded-3xl blur-2xl"></div>
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img 
@@ -22,19 +22,20 @@ export default function DienBienPhu() {
                   alt="Chiến thắng Điện Biên Phủ"
                   className="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700"
                 />
+                {/* Caption - giữ nguyên vị trí */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                   <p className="text-white font-medium">Lá cờ "Quyết chiến quyết thắng" tung bay trên nóc hầm Đờ Cát</p>
                   <p className="text-white/70 text-sm">7/5/1954 - Điện Biên Phủ</p>
                 </div>
               </div>
 
-              {/* Battle Stats */}
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-4">
+              {/* Battle Stats - đẩy xuống dưới ảnh */}
+              <div className="flex gap-2 md:gap-4 justify-center mt-6">
                 {battleStats.map((stat, idx) => (
-                  <div key={idx} className="bg-white shadow-xl rounded-xl px-4 py-3 text-center min-w-[100px]">
-                    <stat.icon className="w-5 h-5 text-[#C9A227] mx-auto mb-1" />
-                    <p className="text-xl font-bold text-[#0F1C3F]">{stat.value}</p>
-                    <p className="text-xs text-gray-500">{stat.label}</p>
+                  <div key={idx} className="bg-white shadow-xl rounded-xl px-3 md:px-4 py-2 md:py-3 text-center flex-1 max-w-[120px]">
+                    <stat.icon className="w-4 h-4 md:w-5 md:h-5 text-[#C9A227] mx-auto mb-1" />
+                    <p className="text-base md:text-xl font-bold text-[#0F1C3F]">{stat.value}</p>
+                    <p className="text-[10px] md:text-xs text-gray-500 leading-tight">{stat.label}</p>
                   </div>
                 ))}
               </div>

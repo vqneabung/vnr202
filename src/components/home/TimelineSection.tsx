@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Clock, X, Calendar, MapPin, Users, BookOpen, ChevronRight } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 
 // Interface cho timeline item
 interface TimelineItem {
@@ -115,23 +114,23 @@ export default function TimelineSection() {
   const [selectedEvent, setSelectedEvent] = useState<TimelineItem | null>(null);
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-[var(--antique-parchment)] to-[#E8DCC8]">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-[#F5EDE0] to-[#E8DCC8]">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-3 mb-4 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--antique-gold)] to-[var(--royal-burgundy)] flex items-center justify-center">
+            <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-[#C9A227]/20">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9A227] to-[#8B1A1A] flex items-center justify-center">
                 <Clock className="w-5 h-5 text-white" />
               </div>
-              <span className="text-sm font-semibold text-[var(--royal-burgundy)] uppercase tracking-wider">
+              <span className="text-sm font-semibold text-[#8B1A1A] uppercase tracking-wider">
                 1945 — 1975
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--timeless-navy)] mb-4">
-              Dòng Thời Gian Lịch Sử
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F1C3F] mb-4">
+              Dòng <span className="text-[#8B1A1A]">Thời Gian</span> Lịch Sử
             </h2>
-            <p className="text-[var(--ancient-stone)] max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Những mốc son chói lọi của dân tộc Việt Nam trong hai cuộc kháng chiến vĩ đại
             </p>
           </div>
@@ -139,10 +138,10 @@ export default function TimelineSection() {
           {/* Timeline */}
           <div className="relative">
             {/* Timeline center line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[var(--antique-gold)] via-[var(--royal-burgundy)] to-[var(--timeless-navy)] rounded-full transform -translate-x-1/2" />
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#C9A227] via-[#8B1A1A] to-[#0F1C3F] rounded-full transform -translate-x-1/2" />
             
             {/* Mobile line */}
-            <div className="md:hidden absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[var(--antique-gold)] via-[var(--royal-burgundy)] to-[var(--timeless-navy)]" />
+            <div className="md:hidden absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#C9A227] via-[#8B1A1A] to-[#0F1C3F]" />
             
             <div className="space-y-12">
               {timeline.map((item, index) => (
@@ -154,21 +153,21 @@ export default function TimelineSection() {
                 >
                   {/* Year badge - center on desktop */}
                   <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[var(--antique-gold)] to-[var(--royal-burgundy)] flex items-center justify-center shadow-xl border-4 border-white">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#C9A227] to-[#8B1A1A] flex items-center justify-center shadow-xl border-4 border-white">
                       <span className="text-white font-bold text-lg">{item.year}</span>
                     </div>
                   </div>
 
                   {/* Mobile year badge */}
-                  <div className="md:hidden absolute left-4 top-0 w-5 h-5 rounded-full bg-[var(--antique-gold)] border-4 border-white shadow-lg z-10" />
+                  <div className="md:hidden absolute left-4 top-0 w-5 h-5 rounded-full bg-[#C9A227] border-4 border-white shadow-lg z-10" />
                   
                   {/* Content */}
                   <div className={`w-full md:w-[calc(50%-3rem)] ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'} pl-14 md:pl-0`}>
-                    <Card 
-                      className="group cursor-pointer overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
+                    <div 
+                      className="group cursor-pointer overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 bg-white rounded-2xl"
                       onClick={() => setSelectedEvent(item)}
                     >
-                      <CardContent className="p-0">
+                      <div className="p-0">
                         {/* Image */}
                         <div className="relative aspect-video overflow-hidden">
                           <img 
@@ -183,13 +182,13 @@ export default function TimelineSection() {
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                           
                           {/* Year on mobile */}
-                          <div className="md:hidden absolute top-4 left-4 px-3 py-1 bg-[var(--antique-gold)] rounded-full">
+                          <div className="md:hidden absolute top-4 left-4 px-3 py-1 bg-[#C9A227] rounded-full">
                             <span className="text-white font-bold text-sm">{item.year}</span>
                           </div>
                           
                           {/* Content overlay */}
                           <div className="absolute bottom-0 left-0 right-0 p-5">
-                            <h3 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-[var(--antique-gold)] transition-colors">
+                            <h3 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-[#C9A227] transition-colors">
                               {item.event}
                             </h3>
                             <div className="flex items-center gap-4 text-white/80 text-sm">
@@ -213,8 +212,8 @@ export default function TimelineSection() {
                             <ChevronRight className="w-5 h-5 text-white" />
                           </div>
                         </div>
-                      </CardContent>
-                    </Card>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -230,7 +229,7 @@ export default function TimelineSection() {
           onClick={() => setSelectedEvent(null)}
         >
           <div 
-            className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-300"
+            className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-300"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header with Image */}
@@ -252,7 +251,7 @@ export default function TimelineSection() {
 
               {/* Title overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="inline-block px-4 py-2 bg-[var(--antique-gold)] rounded-full mb-3">
+                <div className="inline-block px-4 py-2 bg-[#C9A227] rounded-full mb-3">
                   <span className="text-white font-bold">{selectedEvent.year}</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
@@ -281,14 +280,14 @@ export default function TimelineSection() {
               {selectedEvent.leaders && selectedEvent.leaders.length > 0 && (
                 <div className="mb-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <Users className="w-5 h-5 text-[var(--royal-burgundy)]" />
-                    <h4 className="font-semibold text-[var(--timeless-navy)]">Lãnh đạo tiêu biểu</h4>
+                    <Users className="w-5 h-5 text-[#8B1A1A]" />
+                    <h4 className="font-semibold text-[#0F1C3F]">Lãnh đạo tiêu biểu</h4>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {selectedEvent.leaders.map((leader, idx) => (
                       <span 
                         key={idx}
-                        className="px-3 py-1 bg-[var(--antique-parchment)] text-[var(--timeless-navy)] rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-[#F5EDE0] text-[#0F1C3F] rounded-full text-sm font-medium"
                       >
                         {leader}
                       </span>
@@ -300,25 +299,25 @@ export default function TimelineSection() {
               {/* Description */}
               <div className="mb-6">
                 <div className="flex items-center gap-2 mb-3">
-                  <BookOpen className="w-5 h-5 text-[var(--royal-burgundy)]" />
-                  <h4 className="font-semibold text-[var(--timeless-navy)]">Diễn biến</h4>
+                  <BookOpen className="w-5 h-5 text-[#8B1A1A]" />
+                  <h4 className="font-semibold text-[#0F1C3F]">Diễn biến</h4>
                 </div>
-                <p className="text-[var(--ancient-stone)] leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {selectedEvent.description}
                 </p>
               </div>
 
               {/* Significance */}
               <div className="mb-6">
-                <h4 className="font-semibold text-[var(--timeless-navy)] mb-3 flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-[var(--antique-gold)] flex items-center justify-center text-white text-xs">★</span>
+                <h4 className="font-semibold text-[#0F1C3F] mb-3 flex items-center gap-2">
+                  <span className="w-5 h-5 rounded-full bg-[#C9A227] flex items-center justify-center text-white text-xs">★</span>
                   Ý nghĩa lịch sử
                 </h4>
                 <ul className="space-y-2">
                   {selectedEvent.significance.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <span className="w-2 h-2 bg-[var(--royal-burgundy)] rounded-full mt-2 flex-shrink-0"></span>
-                      <span className="text-[var(--ancient-stone)]">{item}</span>
+                      <span className="w-2 h-2 bg-[#8B1A1A] rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="text-gray-600">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -326,8 +325,8 @@ export default function TimelineSection() {
 
               {/* Casualties if available */}
               {selectedEvent.casualties && (
-                <div className="p-4 bg-[var(--antique-parchment)] rounded-lg">
-                  <p className="text-sm text-[var(--timeless-navy)]">
+                <div className="p-4 bg-[#F5EDE0] rounded-xl">
+                  <p className="text-sm text-[#0F1C3F]">
                     <strong>Kết quả:</strong> {selectedEvent.casualties}
                   </p>
                 </div>

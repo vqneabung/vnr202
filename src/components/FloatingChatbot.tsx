@@ -207,10 +207,10 @@ export default function FloatingChatbot() {
               </div>
             ))}
 
-            {/* Typing indicator */}
-            {(status === "streaming" || status === "submitted") && (
-              <div className="flex gap-3 message-fade-in">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A227] to-[#a88620] flex items-center justify-center shadow-md">
+            {/* Typing indicator - only show when submitted, not streaming */}
+            {status === "submitted" && (
+              <div className="flex gap-3 items-start message-fade-in">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A227] to-[#a88620] flex items-center justify-center shadow-md flex-shrink-0">
                   <Loader2 className="w-4 h-4 text-white animate-spin" />
                 </div>
                 <div className="bg-white border border-gray-100 rounded-2xl rounded-bl-md p-3.5 shadow-sm">

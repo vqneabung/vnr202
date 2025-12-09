@@ -6,6 +6,7 @@ import { Send, Bot, User, Loader2, Sparkles, History, Trash2, MessageSquare, Lig
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import MarkdownContent from "@/components/ui/markdown";
 import { DefaultChatTransport } from "ai";
 
 const suggestedTopics = [
@@ -202,12 +203,16 @@ export default function Chatbot() {
                         className={`max-w-[75%] rounded-2xl p-4 shadow-sm ${
                           message.role === "user"
                             ? "bg-gradient-to-br from-[#0F1C3F] to-[#1a2d5a] text-white rounded-br-md"
-                            : "bg-white border border-gray-100 rounded-bl-md"
+                            : "bg-white border border-gray-100 rounded-bl-md text-gray-800"
                         }`}
                       >
-                        <p className="text-sm leading-relaxed whitespace-pre-wrap">
-                          {textContent}
-                        </p>
+                        {message.role === "assistant" ? (
+                          <MarkdownContent content={textContent} />
+                        ) : (
+                          <p className="text-sm leading-relaxed whitespace-pre-wrap">
+                            {textContent}
+                          </p>
+                        )}
                       </div>
                       {message.role === "user" && (
                         <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#8B1A1A] to-[#6d1414] flex items-center justify-center flex-shrink-0 shadow-md">

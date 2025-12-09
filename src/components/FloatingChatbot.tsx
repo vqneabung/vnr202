@@ -5,6 +5,7 @@ import { useChat } from "@ai-sdk/react";
 import { Send, Bot, User, Loader2, X, MessageCircle, Sparkles, History, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import MarkdownContent from "@/components/ui/markdown";
 import { DefaultChatTransport } from "ai";
 
 const suggestedQuestions = [
@@ -204,12 +205,16 @@ export default function FloatingChatbot() {
                     className={`max-w-[80%] rounded-2xl p-3.5 shadow-sm ${
                       message.role === "user"
                         ? "bg-gradient-to-br from-[#0F1C3F] to-[#1a2d5a] text-white rounded-br-md"
-                        : "bg-white border border-gray-100 rounded-bl-md"
+                        : "bg-white border border-gray-100 rounded-bl-md text-gray-800"
                     }`}
                   >
-                    <p className="text-sm leading-relaxed whitespace-pre-wrap">
-                      {textContent}
-                    </p>
+                    {message.role === "assistant" ? (
+                      <MarkdownContent content={textContent} />
+                    ) : (
+                      <p className="text-sm leading-relaxed whitespace-pre-wrap">
+                        {textContent}
+                      </p>
+                    )}
                   </div>
                   {message.role === "user" && (
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#8B1A1A] to-[#6d1414] flex items-center justify-center flex-shrink-0 shadow-md">

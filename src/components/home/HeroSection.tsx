@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Clock, Star, Flag, Award, Sparkles } from "lucide-react";
+import { ArrowRight, Clock, Star, Flag, Award, Sparkles, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const heroStats = [
@@ -20,6 +20,14 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
         />
       </div>
+
+      {/* Grain/Noise overlay for vintage effect */}
+      <div 
+        className="absolute inset-0 z-[5] opacity-20 pointer-events-none mix-blend-overlay"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+        }}
+      />
 
       {/* Decorative Elements */}
       <div className="absolute inset-0 z-0">
@@ -101,6 +109,14 @@ export default function HeroSection() {
               </Link>
             </Button>
           </div>
+        </div>
+      </div>
+
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-28 md:bottom-32 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce">
+        <span className="text-white/60 text-xs tracking-widest uppercase">Cuộn xuống</span>
+        <div className="w-8 h-12 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
+          <ChevronDown className="w-4 h-4 text-[#C9A227] animate-pulse" />
         </div>
       </div>
 

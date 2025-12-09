@@ -35,18 +35,33 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded flex items-center justify-center border-2 border-[#C9A227]" style={{
-              background: "linear-gradient(135deg, #C9A227, #8B1A1A)"
-            }}>
-              <Star className="w-5 h-5 text-white" />
+            <div className="relative">
+              {/* Outer glow effect */}
+              <div className="absolute inset-0 bg-[#C9A227] rounded-lg blur-md opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              {/* Logo container */}
+              <div className="relative w-11 h-11 rounded-lg flex items-center justify-center border-2 border-[#C9A227] shadow-lg overflow-hidden" style={{
+                background: "linear-gradient(135deg, #C9A227 0%, #B8860B 50%, #8B6914 100%)"
+              }}>
+                {/* Inner pattern */}
+                <div className="absolute inset-0 opacity-20" style={{
+                  backgroundImage: `radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3) 0%, transparent 50%)`
+                }}></div>
+                <Star className="w-5 h-5 text-white drop-shadow-md relative z-10" fill="white" />
+              </div>
             </div>
             <div className="hidden sm:block">
-              <span className="text-white font-bold text-lg group-hover:text-[#C9A227] transition-colors" style={{ color: '#FFFFFF' }}>
-                Lịch Sử Đảng
-              </span>
-              <span className="text-[#C9A227] text-xs block tracking-widest" style={{ color: '#C9A227' }}>
-                1945 — 1975
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-white font-bold text-lg group-hover:text-[#C9A227] transition-colors tracking-wide" style={{ color: '#FFFFFF' }}>
+                  Lịch Sử Đảng
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-px bg-[#C9A227]/50"></div>
+                <span className="text-[#C9A227] text-xs tracking-[0.2em] font-medium" style={{ color: '#C9A227' }}>
+                  1945 — 1975
+                </span>
+                <div className="w-4 h-px bg-[#C9A227]/50"></div>
+              </div>
             </div>
           </Link>
 

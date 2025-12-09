@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import FloatingChatbot from "@/components/FloatingChatbot";
+import AppWrapper from "@/components/AppWrapper";
 
 const inter = Inter({
   subsets: ["latin", "vietnamese"],
@@ -25,10 +23,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className={`${inter.variable} font-sans antialiased`}>
-        <Header />
-        {children}
-        <Footer />
-        <FloatingChatbot />
+        <AppWrapper>{children}</AppWrapper>
       </body>
     </html>
   );

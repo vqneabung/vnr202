@@ -15,6 +15,7 @@ const navigation = [
       { name: "Kháng Chiến Chống Mỹ (1954-1975)", href: "/chi-tiet/khang-chien-chong-my" },
     ],
   },
+  { name: "Nhân Vật Lịch Sử", href: "/nhan-vat-lich-su" },
   { name: "Thư Viện", href: "/thu-vien" },
   { name: "Ý Nghĩa", href: "/y-nghia" },
   { name: "Quiz", href: "/quiz" },

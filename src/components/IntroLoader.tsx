@@ -181,9 +181,9 @@ export default function IntroLoader({ onComplete }: { onComplete: () => void }) 
         {/* Line 1 */}
         <div className="text-center mb-4 min-h-[2rem] md:min-h-[3rem]">
           <p 
-            className="text-xl md:text-3xl lg:text-4xl font-serif text-white/90 tracking-wide"
+            className="text-xl md:text-3xl lg:text-4xl text-white/90 tracking-wide"
             style={{ 
-              fontFamily: "'Playfair Display', 'Times New Roman', serif",
+              fontFamily: "var(--font-playfair), 'Times New Roman', serif",
               textShadow: '0 0 40px rgba(201, 162, 39, 0.3)'
             }}
           >
@@ -195,9 +195,9 @@ export default function IntroLoader({ onComplete }: { onComplete: () => void }) 
         {/* Line 2 */}
         <div className="text-center min-h-[2rem] md:min-h-[3rem]">
           <p 
-            className="text-lg md:text-2xl lg:text-3xl font-serif text-[#C9A227] tracking-wide italic"
+            className="text-lg md:text-2xl lg:text-3xl text-[#C9A227] tracking-wide italic"
             style={{ 
-              fontFamily: "'Playfair Display', 'Times New Roman', serif",
+              fontFamily: "var(--font-playfair), 'Times New Roman', serif",
               textShadow: '0 0 30px rgba(201, 162, 39, 0.4)'
             }}
           >

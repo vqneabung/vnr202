@@ -220,8 +220,8 @@ export default function FloatingChatbot() {
               );
             })}
 
-            {/* Typing indicator - only show when submitted, not streaming */}
-            {status === "submitted" && (
+            {/* Typing indicator - show when not ready (submitted or streaming) */}
+            {status !== "ready" && status !== "error" && (
               <div className="flex gap-3 items-start message-fade-in">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A227] to-[#a88620] flex items-center justify-center shadow-md flex-shrink-0">
                   <Loader2 className="w-4 h-4 text-white animate-spin" />

@@ -218,8 +218,8 @@ export default function Chatbot() {
                   );
                 })}
 
-                {/* Typing indicator - only show when submitted */}
-                {status === "submitted" && (
+                {/* Typing indicator - show when not ready */}
+                {status !== "ready" && status !== "error" && (
                   <div className="flex gap-4 items-start message-fade-in">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C9A227] to-[#a88620] flex items-center justify-center shadow-md flex-shrink-0">
                       <Loader2 className="w-5 h-5 text-white animate-spin" />

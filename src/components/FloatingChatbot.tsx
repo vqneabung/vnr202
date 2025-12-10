@@ -18,6 +18,7 @@ export default function FloatingChatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
   const { messages, sendMessage, status, setMessages } = useChat({
     transport: new DefaultChatTransport({
@@ -47,10 +48,12 @@ export default function FloatingChatbot() {
     setMessages([]);
   };
 
-  // Auto scroll to bottom when new messages arrive
+  // Auto scroll to bottom when new messages arrive - only within container
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
+  }, [messages, status]);
 
   return (
     <>
@@ -135,7 +138,10 @@ export default function FloatingChatbot() {
           </div>
 
           {/* Messages Area */}
-          <div className="h-[380px] overflow-y-auto p-4 space-y-4 bg-gradient-to-b from-[#FFFDF8] to-[#F5EDE0] custom-scrollbar">
+          <div 
+            ref={messagesContainerRef}
+            className="h-[380px] overflow-y-auto p-4 space-y-4 bg-gradient-to-b from-[#FFFDF8] to-[#F5EDE0] custom-scrollbar"
+          >
             {/* Welcome message when empty */}
             {messages.length === 0 && (
               <div className="text-center py-6 space-y-6">

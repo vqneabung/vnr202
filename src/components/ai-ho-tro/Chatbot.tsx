@@ -35,6 +35,7 @@ const suggestedTopics = [
 export default function Chatbot() {
   const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
   const { messages, sendMessage, status, setMessages } = useChat({
     transport: new DefaultChatTransport({
@@ -64,10 +65,12 @@ export default function Chatbot() {
     setMessages([]);
   };
 
-  // Auto scroll to bottom
+  // Auto scroll to bottom - only within messages container
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
+  }, [messages, status]);
 
   return (
     <section className="py-12 bg-gradient-to-b from-[var(--antique-parchment)] to-[#E8DCC8]">
@@ -122,7 +125,10 @@ export default function Chatbot() {
 
             <CardContent className="p-0">
               {/* Messages Area */}
-              <div className="h-[520px] overflow-y-auto p-6 space-y-4 bg-gradient-to-b from-white to-[#FFFDF8] custom-scrollbar">
+              <div 
+                ref={messagesContainerRef}
+                className="h-[520px] overflow-y-auto p-6 space-y-4 bg-gradient-to-b from-white to-[#FFFDF8] custom-scrollbar"
+              >
                 {/* Welcome state */}
                 {messages.length === 0 && (
                   <div className="h-full flex flex-col items-center justify-center text-center py-8">

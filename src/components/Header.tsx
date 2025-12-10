@@ -47,7 +47,7 @@ export default function Header() {
                 <div className="absolute inset-0 opacity-20" style={{
                   backgroundImage: `radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3) 0%, transparent 50%)`
                 }}></div>
-                <Star className="w-5 h-5 text-white drop-shadow-md relative z-10" fill="white" />
+                <Star className="w-5 h-5 text-white drop-shadow-md relative z-10" fill="#FFFF00" />
               </div>
             </div>
             <div className="hidden sm:block">

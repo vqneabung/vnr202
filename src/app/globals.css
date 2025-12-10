@@ -1,27 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  /* Historical Color Palette */
-  --antique-gold: #C9A227;
+  /* Vietnam Flag & Banner Color Palette (baochinhphu.vn inspired) */
+  --vietnam-red: #AC0705;
+  --vietnam-gold: #FFD700;
+  --vietnam-white: #FFFFFF;
+  --deep-red: #8B1A1A;
+  --off-white: #FAFAFA;
+
+  /* Updated Historical Color Palette */
+  --antique-gold: var(--vietnam-gold);
   --ancient-stone: #6B6560;
-  --royal-burgundy: #8B1A1A;
+  --royal-burgundy: var(--deep-red);
   --timeless-navy: #0F1C3F;
   --rustic-olive: #4A5D23;
-  --antique-parchment: #F5EDE0;
+  --antique-parchment: var(--off-white);
   --parchment-dark: #E8DCC8;
   --sepia: #704214;
   --ink-black: #1A1A1A;
 
   /* Semantic colors */
-  --background: var(--antique-parchment);
-  --foreground: var(--ink-black);
-  --card-background: #FFFDF8;
-  --card-border: #D4C8B5;
+  --background: linear-gradient(135deg, var(--vietnam-red) 0%, #D32F2F 50%, #AC0705 100%);
+  --foreground: var(--vietnam-white);
+  --card-background: var(--off-white);
+  --card-border: var(--vietnam-gold);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card-background);
+  --color-card-foreground: var(--ink-black);
+  --color-border: var(--card-border);
   --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -57,13 +67,13 @@ h3 {
 
 /* Links */
 a {
-  color: var(--royal-burgundy);
+  color: var(--vietnam-gold);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--antique-gold);
+  color: var(--vietnam-white);
 }
 
 /* Container */
@@ -75,8 +85,8 @@ a:hover {
 
 /* Selection */
 ::selection {
-  background: var(--antique-gold);
-  color: var(--timeless-navy);
+  background: var(--vietnam-gold);
+  color: var(--deep-red);
 }
 
 /* Custom Scrollbar for history sidebar */

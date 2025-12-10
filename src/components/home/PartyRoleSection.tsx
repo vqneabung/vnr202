@@ -30,19 +30,19 @@ const partyRoles = [
 
 export default function PartyRoleSection() {
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-20 md:py-28 bg-[#FFFDF8]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Content */}
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#8B1A1A]/10 rounded-full mb-6">
-                <Users className="w-4 h-4 text-[#8B1A1A]" />
-                <span className="text-sm font-medium text-[#8B1A1A]">Vai trò lãnh đạo</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#AC0705]/10 rounded-full mb-6">
+                <Users className="w-4 h-4 text-[#AC0705]" />
+                <span className="text-sm font-medium text-[#AC0705]">Vai trò lãnh đạo</span>
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F1C3F] mb-6">
-                Vai Trò Lãnh Đạo Của <span className="text-[#8B1A1A]">Đảng</span>
+                Vai Trò Lãnh Đạo Của <span className="text-[#AC0705]">Đảng</span>
               </h2>
               
               <p className="text-gray-600 mb-8 leading-relaxed text-lg">
@@ -55,12 +55,12 @@ export default function PartyRoleSection() {
               <div className="space-y-4">
                 {partyRoles.map((role, index) => (
                   <div key={index} className="flex items-start gap-4 group">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C9A227] to-[#8B6914] flex items-center justify-center flex-shrink-0
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFD700] to-[#AC0705] flex items-center justify-center flex-shrink-0
                                     shadow group-hover:scale-110 transition-transform duration-300">
                       <role.icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-[#0F1C3F] group-hover:text-[#8B1A1A] transition-colors">{role.title}</h4>
+                      <h4 className="font-bold text-[#0F1C3F] group-hover:text-[#AC0705] transition-colors">{role.title}</h4>
                       <p className="text-gray-600 text-sm">{role.description}</p>
                     </div>
                   </div>
@@ -70,19 +70,19 @@ export default function PartyRoleSection() {
 
             {/* Right - Quote Card */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-[#0F1C3F] to-[#1a2d5a] rounded-3xl p-8 md:p-10 text-white">
+              <div className="bg-[#AC0705] rounded-3xl p-8 md:p-10 text-white">
                 {/* Decorative */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9A227] rounded-full blur-3xl opacity-20"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFD700] rounded-full blur-3xl opacity-20"></div>
                 
                 <div className="relative z-10">
-                  <Star className="w-10 h-10 text-[#C9A227] mb-6" />
+                  <Star className="w-10 h-10 text-[#FFD700] mb-6" />
                   
                   <blockquote className="text-xl md:text-2xl italic mb-6 leading-relaxed">
                     &ldquo;Đảng ta là một Đảng cầm quyền. Mỗi đảng viên và cán bộ phải thật sự 
                     thấm nhuần đạo đức cách mạng&rdquo;
                   </blockquote>
                   
-                  <cite className="text-[#C9A227] font-semibold text-lg not-italic block">
+                  <cite className="text-[#FFD700] font-semibold text-lg not-italic block">
                     — Chủ tịch Hồ Chí Minh
                   </cite>
                 </div>
@@ -90,15 +90,15 @@ export default function PartyRoleSection() {
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-white/20">
                   <div className="text-center">
-                    <p className="text-2xl font-bold text-[#C9A227]">30</p>
+                    <p className="text-2xl font-bold text-[#FFD700]">30</p>
                     <p className="text-white/60 text-sm">Năm lãnh đạo</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-2xl font-bold text-[#C9A227]">2</p>
+                    <p className="text-2xl font-bold text-[#FFD700]">2</p>
                     <p className="text-white/60 text-sm">Đế quốc</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-2xl font-bold text-[#C9A227]">1</p>
+                    <p className="text-2xl font-bold text-[#FFD700]">1</p>
                     <p className="text-white/60 text-sm">Thắng lợi</p>
                   </div>
                 </div>

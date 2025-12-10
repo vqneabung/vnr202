@@ -28,9 +28,9 @@ export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 shadow-lg" style={{ backgroundColor: "#0F1C3F" }}>
+    <header className="sticky top-0 z-50 shadow-lg" style={{ backgroundColor: "var(--vietnam-red)" }}>
       {/* Top decorative bar - vintage gold stripe */}
-      <div className="h-1" style={{ background: "linear-gradient(90deg, #8B1A1A, #C9A227, #8B1A1A)" }}></div>
+      <div className="h-1" style={{ background: "linear-gradient(90deg, var(--vietnam-red), var(--vietnam-gold), var(--vietnam-red))" }}></div>
       
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -38,30 +38,30 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
               {/* Outer glow effect */}
-              <div className="absolute inset-0 bg-[#C9A227] rounded-lg blur-md opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              <div className="absolute inset-0 bg-[#8B1A1A] rounded-lg blur-md opacity-30 group-hover:opacity-50 transition-opacity"></div>
               {/* Logo container */}
-              <div className="relative w-11 h-11 rounded-lg flex items-center justify-center border-2 border-[#C9A227] shadow-lg overflow-hidden" style={{
-                background: "linear-gradient(135deg, #C9A227 0%, #B8860B 50%, #8B6914 100%)"
+              <div className="relative w-11 h-11 rounded-lg flex items-center justify-center border-2 border-[#8B1A1A] shadow-lg overflow-hidden" style={{
+                background: "linear-gradient(135deg, #8B1A1A 0%, #B22222 50%, #DC143C 100%)"
               }}>
                 {/* Inner pattern */}
                 <div className="absolute inset-0 opacity-20" style={{
                   backgroundImage: `radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3) 0%, transparent 50%)`
                 }}></div>
-                <Star className="w-5 h-5 text-white drop-shadow-md relative z-10" fill="#FFFF00" />
+                <Star className="w-5 h-5 text-[#C9A227] drop-shadow-md relative z-10" fill="#C9A227" />
               </div>
             </div>
             <div className="hidden sm:block">
               <div className="flex items-center gap-2">
-                <span className="text-white font-bold text-lg group-hover:text-[#C9A227] transition-colors tracking-wide" style={{ color: '#FFFFFF' }}>
+                <span className="text-white font-bold text-lg group-hover:text-[#FFD700] transition-colors tracking-wide" style={{ color: 'var(--vietnam-gold)' }}>
                   Lịch Sử Đảng
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-4 h-px bg-[#C9A227]/50"></div>
-                <span className="text-[#C9A227] text-xs tracking-[0.2em] font-medium" style={{ color: '#C9A227' }}>
+                <span className="text-[#FFD700] text-xs tracking-[0.2em] font-medium" style={{ color: '#FFD700' }}>
                   1945 — 1975
                 </span>
-                <div className="w-4 h-px bg-[#C9A227]/50"></div>
+                <div className="w-4 h-px bg-[#FFD700]/50"></div>
               </div>
             </div>
           </Link>
@@ -76,7 +76,7 @@ export default function Header() {
                   >
                     <button 
                       onClick={() => setDropdownOpen(!dropdownOpen)}
-                      className="px-4 py-2 text-[#F4D03F] hover:text-[#FFD700] transition-colors text-sm font-semibold flex items-center gap-1 tracking-wide" style={{ color: '#F4D03F' }}
+                      className="px-4 py-2 text-[#FFD700] hover:text-[#FFFFFF] transition-colors text-sm font-semibold flex items-center gap-1 tracking-wide" style={{ color: '#FFD700' }}
                     >
                       {item.name}
                       <svg
@@ -106,8 +106,8 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="px-4 py-2 text-[#F4D03F] hover:text-[#FFD700] transition-colors text-sm font-semibold tracking-wide"
-                    style={{ color: '#F4D03F' }}
+                    className="px-4 py-2 text-[#FFD700] hover:text-[#FFFFFF] transition-colors text-sm font-semibold tracking-wide"
+                    style={{ color: '#FFD700' }}
                   >
                     {item.name}
                   </Link>
@@ -118,7 +118,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-[#F4D03F] hover:text-[#FFD700] transition-colors"
+            className="lg:hidden p-2 text-[#FFD700] hover:text-[#FFFFFF] transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -132,14 +132,14 @@ export default function Header() {
               <div key={item.name}>
                 {item.children ? (
                   <>
-                    <div className="px-4 py-2 text-[#C9A227] font-semibold text-sm tracking-wide uppercase">
+                    <div className="px-4 py-2 text-[#FFD700] font-semibold text-sm tracking-wide uppercase">
                       {item.name}
                     </div>
                     {item.children.map((child) => (
                       <Link
                         key={child.name}
                         href={child.href}
-                        className="block px-6 py-2 text-[#F4D03F] hover:text-[#FFD700] hover:bg-[#1A2D5A] transition-colors text-sm"
+                        className="block px-6 py-2 text-[#FFD700] hover:text-[#FFFFFF] hover:bg-[#1A2D5A] transition-colors text-sm"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {child.name}
@@ -149,7 +149,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-4 py-2 text-[#F4D03F] hover:text-[#FFD700] hover:bg-[#1A2D5A] transition-colors text-sm font-semibold"
+                    className="block px-4 py-2 text-[#FFD700] hover:text-[#FFFFFF] hover:bg-[#1A2D5A] transition-colors text-sm font-semibold"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}

@@ -44,7 +44,7 @@ interface TimelineItem {
 const timeline: TimelineItem[] = [
   { 
     year: "1945–1946", 
-    event: "Vận Nước Ngàn Cân Treo Sợi Tóc", // Tiêu đề giật gân hơn
+    event: "Xây dựng & bảo vệ chính quyền cách mạng", // Tiêu đề giật gân hơn
     image: "https://file3.qdnd.vn/data/images/0/2022/07/25/huyentrang_km/2.jpg",
     date: "19/08/1945 - 19/12/1946",
     location: "Bắc Bộ và Nam Bộ",
@@ -58,7 +58,7 @@ const timeline: TimelineItem[] = [
   },
   { 
     year: "1946–1950", 
-    event: "Thà Hy Sinh Tất Cả Chứ Không Chịu Mất Nước",
+    event: "Đường lối kháng chiến toàn quốc",
     image: "https://images.baodantoc.vn/uploads/2021/Th%C3%A1ng_12/Ng%C3%A0y_18/Nga/82F2C31D-4736-4A67-957E-BC39E1A49C10.jpg",
     date: "19/12/1946 - 1950",
     location: "Hà Nội - Chiến khu Việt Bắc",
@@ -72,7 +72,7 @@ const timeline: TimelineItem[] = [
   },
   { 
     year: "1951–1954", 
-    event: "Điện Biên Phủ: Lừng Lẫy Năm Châu, Chấn Động Địa Cầu",
+    event: "Đẩy mạnh kháng chiến, thắng lợi chống Pháp ",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Victory_in_Battle_of_Dien_Bien_Phu.jpg/1200px-Victory_in_Battle_of_Dien_Bien_Phu.jpg",
     date: "1951 - 07/05/1954",
     location: "Điện Biên Phủ",
@@ -87,7 +87,7 @@ const timeline: TimelineItem[] = [
   },
   { 
     year: "1954–1965", 
-    event: "Đất Nước Chia Cắt & Ngọn Lửa Đồng Khởi",
+    event: "Lãnh đạo cách mạng hai miền ",
     image: "https://file3.qdnd.vn/data/images/0/2021/12/16/thuyanh/mtdt.jpg?dpi=150&quality=100&w=870",
     date: "1954 - 1965",
     location: "Miền Bắc (Hậu phương) - Miền Nam (Tiền tuyến)",
@@ -101,7 +101,7 @@ const timeline: TimelineItem[] = [
   },
   { 
     year: "1965–1975", 
-    event: "Thần Tốc, Táo Bạo, Quyết Thắng: Đại Thắng Mùa Xuân",
+    event: "Lãnh đạo kháng chiến chống Mỹ & giải phóng miền Nam ",
     image: "https://special.vietnamplus.vn/wp-content/uploads/2021/03/ttxvntongt-1588123540-60.jpg",
     date: "1965 - 30/04/1975",
     location: "Dọc tuyến đường Trường Sơn & Sài Gòn",

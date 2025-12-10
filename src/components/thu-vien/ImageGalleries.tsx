@@ -34,7 +34,6 @@ const galleries = [
       { src: "https://bandothegioikholon.com/wp-content/uploads/2018/08/b%E1%BA%A3n-%C4%91%E1%BB%93-chi%E1%BA%BFn-d%E1%BB%8Bch-HCM.jpg", caption: "Bản đồ Chiến dịch Hồ Chí Minh" },
       { src: "https://file3.qdnd.vn/data/images/0/2025/04/18/upload_2183/dd46912614pm.jpg?dpi=150&quality=100&w=870", caption: "Xe tăng tiến vào Dinh Độc Lập" },
       { src: "https://danviet.ex-cdn.com/files/f1/2021/4/28/11-161959012348422416202.jpg", caption: "Giải phóng Sài Gòn 30/4/1975" },
-      { src: "https://special.vietnamplus.vn/wp-content/uploads/2021/03/ttxvntongt-1588123540-60.jpg", caption: "Ngày thống nhất đất nước" },
     ],
   },
   {

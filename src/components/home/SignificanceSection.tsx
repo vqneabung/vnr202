@@ -8,14 +8,14 @@ const significanceItems = [
     title: "Khẳng định vai trò lãnh đạo",
     description: "Đảng Cộng sản Việt Nam đã chứng minh năng lực lãnh đạo xuất sắc, đưa dân tộc từ nô lệ đến tự do, từ chia cắt đến thống nhất.",
     highlight: "30 năm đấu tranh",
-    color: "from-[#C9A227] to-[#8B6914]"
+    color: "from-[#FFD700] to-[#AC0705]"
   },
   {
     icon: Award,
     title: "Chiến thắng vẻ vang",
     description: "Đánh bại hai đế quốc lớn nhất thời đại: Pháp và Mỹ. Điện Biên Phủ và Đại thắng mùa Xuân 1975 là những chiến công lừng lẫy.",
     highlight: "2 đế quốc thất bại",
-    color: "from-[#8B1A1A] to-[#5a1111]"
+    color: "from-[#AC0705] to-[#5a1111]"
   },
   {
     icon: Heart,
@@ -36,14 +36,14 @@ const significanceItems = [
     title: "Bài học cho hôm nay",
     description: "Tinh thần yêu nước, ý chí tự lực tự cường, khát vọng độc lập tự do vẫn là kim chỉ nam cho thế hệ trẻ Việt Nam.",
     highlight: "Giá trị trường tồn",
-    color: "from-[#C9A227] to-[#8B6914]"
+    color: "from-[#FFD700] to-[#AC0705]"
   },
   {
     icon: BookOpen,
     title: "Trách nhiệm thế hệ",
     description: "Học lịch sử không chỉ để biết mà còn để hành động, để xây dựng và bảo vệ Tổ quốc trong thời đại mới.",
     highlight: "Học để hành động",
-    color: "from-[#8B1A1A] to-[#5a1111]"
+    color: "from-[#AC0705] to-[#5a1111]"
   }
 ];
 
@@ -53,13 +53,13 @@ export default function SignificanceSection() {
       {/* Background */}
       <div 
         className="absolute inset-0"
-        style={{ background: "linear-gradient(135deg, #0F1C3F 0%, #1A2D5A 40%, #0F1C3F 70%, #8B1A1A 100%)" }}
+        style={{ background: "#F5EDE0" }}
       />
       
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#C9A227] rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#8B1A1A] rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#FFD700] rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#AC0705] rounded-full blur-3xl"></div>
       </div>
       
       {/* Pattern overlay */}
@@ -71,14 +71,14 @@ export default function SignificanceSection() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
-              <Sparkles className="w-4 h-4 text-[#C9A227]" />
-              <span className="text-sm font-medium text-white/90">Giá trị lịch sử</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#AC0705]/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
+              <Sparkles className="w-4 h-4 text-[#FFD700]" />
+              <span className="text-sm font-medium text-[#AC0705]">Giá trị lịch sử</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ý Nghĩa <span className="text-[#C9A227]">Lịch Sử</span> Vĩ Đại
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0F1C3F] mb-6">
+              Ý Nghĩa <span className="text-[#AC0705]">Lịch Sử</span> Vĩ Đại
             </h2>
-            <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Hai cuộc kháng chiến chống Pháp và chống Mỹ không chỉ mang lại độc lập, thống nhất 
               mà còn để lại những bài học quý báu cho các thế hệ mai sau
             </p>
@@ -89,8 +89,8 @@ export default function SignificanceSection() {
             {significanceItems.map((item, index) => (
               <div 
                 key={index}
-                className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 
-                           hover:bg-white/10 hover:border-[#C9A227]/50 transition-all duration-300
+                className="group relative bg-[#AC0705] backdrop-blur-sm rounded-2xl p-6 border border-white/10 
+                           hover:bg-[#AC0705]/90 hover:border-[#FFD700]/50 transition-all duration-300
                            hover:transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 {/* Icon */}
@@ -100,21 +100,21 @@ export default function SignificanceSection() {
                 </div>
                 
                 {/* Highlight badge */}
-                <div className="inline-block px-3 py-1 bg-[#C9A227]/20 rounded-full mb-3">
-                  <span className="text-xs font-semibold text-[#C9A227]">{item.highlight}</span>
+                <div className="inline-block px-3 py-1 bg-white/20 rounded-full mb-3">
+                  <span className="text-xs font-semibold text-white">{item.highlight}</span>
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#C9A227] transition-colors">
+                <h3 className="text-xl font-bold text-[#FFD700] mb-3 group-hover:text-white transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-white/70 text-sm leading-relaxed">
+                <p className="text-white text-sm leading-relaxed">
                   {item.description}
                 </p>
 
                 {/* Decorative corner */}
                 <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden rounded-tr-2xl">
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-[#C9A227]/20 to-transparent"></div>
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-[#FFD700]/20 to-transparent"></div>
                 </div>
               </div>
             ))}
@@ -123,11 +123,11 @@ export default function SignificanceSection() {
           {/* Bottom Quote */}
           <div className="mt-16 text-center">
             <blockquote className="max-w-3xl mx-auto">
-              <p className="text-2xl md:text-3xl italic text-white/90 mb-4 leading-relaxed">
+              <p className="text-2xl md:text-3xl italic text-gray-700 mb-4 leading-relaxed">
                 &ldquo;Không có gì quý hơn độc lập, tự do&rdquo;
               </p>
-              <cite className="text-[#C9A227] font-semibold text-lg not-italic">
-                — Chủ tịch Hồ Chí Minh
+              <cite className="text-[#AC0705] font-semibold text-lg not-italic">
+                — Chủ tịch Hồ Chí Minh —
               </cite>
             </blockquote>
           </div>

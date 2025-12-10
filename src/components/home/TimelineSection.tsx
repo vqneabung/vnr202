@@ -18,94 +18,79 @@ interface TimelineItem {
 
 const timeline: TimelineItem[] = [
   { 
-    year: "1945", 
-    event: "Cách mạng Tháng Tám thành công",
+    year: "1945–1946", 
+    event: "Xây dựng & bảo vệ chính quyền cách mạng",
     image: "https://file3.qdnd.vn/data/images/0/2022/07/25/huyentrang_km/2.jpg",
-    date: "19/08/1945",
+    date: "19/08/1945 - 19/12/1946",
     location: "Toàn quốc",
     leaders: ["Hồ Chí Minh", "Võ Nguyên Giáp", "Trường Chinh"],
-    description: "Cách mạng Tháng Tám là cuộc cách mạng giành chính quyền do Đảng Cộng sản Việt Nam lãnh đạo, đập tan ách thống trị của phát xít Nhật và thực dân Pháp, lập nên nước Việt Nam Dân chủ Cộng hòa - Nhà nước công nông đầu tiên ở Đông Nam Á.",
+    description: "Giai đoạn từ Cách mạng Tháng Tám thành công đến khi phát động toàn quốc kháng chiến. Đảng và Chủ tịch Hồ Chí Minh lãnh đạo nhân dân giành chính quyền, xây dựng và bảo vệ chính quyền cách mạng non trẻ trong bối cảnh đối mặt với nhiều thách thức từ cả bên trong và bên ngoài.",
     significance: [
       "Chấm dứt chế độ quân chủ phong kiến tồn tại hàng nghìn năm",
       "Khai sinh nước Việt Nam Dân chủ Cộng hòa",
-      "Mở ra kỷ nguyên mới - kỷ nguyên độc lập, tự do",
-      "Cổ vũ phong trào giải phóng dân tộc trên thế giới"
+      "Khắc phục nạn đói, nạn dốt, nạn giặc",
+      "Chuẩn bị lực lượng và tinh thần cho kháng chiến trường kỳ"
     ]
   },
   { 
-    year: "1946", 
-    event: "Toàn quốc kháng chiến",
+    year: "1946–1950", 
+    event: "Đường lối kháng chiến toàn quốc",
     image: "https://images.baodantoc.vn/uploads/2021/Th%C3%A1ng_12/Ng%C3%A0y_18/Nga/82F2C31D-4736-4A67-957E-BC39E1A49C10.jpg",
-    date: "19/12/1946",
-    location: "Hà Nội và các tỉnh thành",
-    leaders: ["Hồ Chí Minh"],
-    description: "Đêm 19/12/1946, Chủ tịch Hồ Chí Minh ra Lời kêu gọi Toàn quốc kháng chiến, mở đầu cuộc kháng chiến chống thực dân Pháp xâm lược. Đây là quyết định lịch sử của toàn dân tộc.",
+    date: "19/12/1946 - 1950",
+    location: "Toàn quốc",
+    leaders: ["Hồ Chí Minh", "Võ Nguyên Giáp"],
+    description: "Giai đoạn đầu cuộc kháng chiến chống thực dân Pháp. Từ Lời kêu gọi toàn quốc kháng chiến của Chủ tịch Hồ Chí Minh, nhân dân cả nước đứng lên chiến đấu theo đường lối kháng chiến trường kỳ, toàn dân, toàn diện.",
     significance: [
       "Khẳng định ý chí quyết tâm bảo vệ độc lập",
-      "Mở đầu 9 năm kháng chiến trường kỳ",
-      "Động viên toàn dân đứng lên chiến đấu",
+      "Xây dựng lực lượng vũ trang và căn cứ địa kháng chiến",
+      "Thực hiện chiến tranh du kích, tiêu hao sinh lực địch",
       "Thể hiện tinh thần \"Thà hy sinh tất cả chứ nhất định không chịu mất nước\""
     ]
   },
   { 
-    year: "1954", 
-    event: "Chiến thắng Điện Biên Phủ",
+    year: "1951–1954", 
+    event: "Đẩy mạnh kháng chiến, thắng lợi chống Pháp",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Victory_in_Battle_of_Dien_Bien_Phu.jpg/1200px-Victory_in_Battle_of_Dien_Bien_Phu.jpg",
-    date: "07/05/1954",
-    location: "Điện Biên Phủ, Tây Bắc Việt Nam",
-    leaders: ["Võ Nguyên Giáp"],
-    description: "Chiến thắng Điện Biên Phủ là trận đánh quyết định kết thúc cuộc kháng chiến chống Pháp. Sau 56 ngày đêm chiến đấu anh dũng, quân ta đã tiêu diệt hoàn toàn tập đoàn cứ điểm Điện Biên Phủ.",
+    date: "1951 - 07/05/1954",
+    location: "Toàn quốc, đỉnh cao tại Điện Biên Phủ",
+    leaders: ["Hồ Chí Minh", "Võ Nguyên Giáp", "Hoàng Văn Thái"],
+    description: "Giai đoạn đẩy mạnh kháng chiến từ chiến tranh du kích lên chiến tranh chính quy, đỉnh cao là chiến thắng Điện Biên Phủ. Sau 56 ngày đêm chiến đấu, quân ta đã giành thắng lợi hoàn toàn, buộc Pháp ký Hiệp định Genève, kết thúc ách thống trị thực dân.",
     significance: [
-      "Đánh bại hoàn toàn kế hoạch Navarre",
-      "Buộc Pháp ký Hiệp định Genève",
-      "Chấm dứt ách thống trị của thực dân Pháp",
-      "Chiến thắng \"lừng lẫy năm châu, chấn động địa cầu\""
+      "Chuyển từ phòng ngự sang tổng phản công chiến lược",
+      "Chiến thắng Điện Biên Phủ \"lừng lẫy năm châu, chấn động địa cầu\"",
+      "Buộc Pháp ký Hiệp định Genève, công nhận độc lập của Việt Nam",
+      "Cổ vũ phong trào giải phóng dân tộc trên thế giới"
     ],
-    casualties: "Tiêu diệt và bắt sống 16.200 địch"
+    casualties: "Tiêu diệt và bắt sống 16.200 địch tại Điện Biên Phủ"
   },
   { 
-    year: "1960", 
-    event: "Thành lập Mặt trận DTGPMN",
+    year: "1954–1965", 
+    event: "Lãnh đạo cách mạng hai miền",
     image: "https://file3.qdnd.vn/data/images/0/2021/12/16/thuyanh/mtdt.jpg?dpi=150&quality=100&w=870",
-    date: "20/12/1960",
-    location: "Tây Ninh, miền Nam Việt Nam",
-    leaders: ["Nguyễn Hữu Thọ", "Huỳnh Tấn Phát"],
-    description: "Mặt trận Dân tộc Giải phóng miền Nam Việt Nam được thành lập, đánh dấu bước phát triển mới của cách mạng miền Nam, tập hợp rộng rãi các lực lượng yêu nước chống Mỹ-Diệm.",
+    date: "1954 - 1965",
+    location: "Miền Bắc và miền Nam",
+    leaders: ["Hồ Chí Minh", "Lê Duẩn", "Nguyễn Hữu Thọ"],
+    description: "Giai đoạn miền Bắc xây dựng chủ nghĩa xã hội, miền Nam đấu tranh giải phóng. Thành lập Mặt trận Dân tộc Giải phóng miền Nam (1960), tập hợp lực lượng yêu nước chống Mỹ - Diệm, đấu tranh chính trị và vũ trang kết hợp.",
     significance: [
-      "Tập hợp sức mạnh đại đoàn kết dân tộc",
-      "Lãnh đạo phong trào đấu tranh ở miền Nam",
-      "Được quốc tế công nhận",
-      "Tiền thân của Chính phủ Cách mạng Lâm thời"
+      "Miền Bắc hoàn thành cải cách ruộng đất, khôi phục kinh tế",
+      "Thành lập Mặt trận Dân tộc Giải phóng miền Nam",
+      "Phát động phong trào đồng khởi, giải phóng nhiều vùng nông thôn",
+      "Chuẩn bị lực lượng cho cuộc kháng chiến chống Mỹ"
     ]
   },
   { 
-    year: "1968", 
-    event: "Tổng tiến công Mậu Thân",
-    image: "https://file3.qdnd.vn/data/images/0/2024/11/11/upload_2059/mau%20than%201968.jpg?dpi=150&quality=100&w=870",
-    date: "30/01/1968 - 23/09/1968",
-    location: "Toàn miền Nam",
-    leaders: ["Lê Duẩn", "Võ Nguyên Giáp"],
-    description: "Cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968 là chiến dịch quân sự lớn nhất trong chiến tranh Việt Nam, tấn công đồng loạt vào các thành phố, thị xã trên toàn miền Nam.",
-    significance: [
-      "Đánh bại ý chí xâm lược của Mỹ",
-      "Buộc Mỹ xuống thang chiến tranh",
-      "Bắt đầu đàm phán Paris",
-      "Bước ngoặt chiến lược của cuộc kháng chiến"
-    ]
-  },
-  { 
-    year: "1975", 
-    event: "Đại thắng mùa Xuân",
+    year: "1965–1975", 
+    event: "Lãnh đạo kháng chiến chống Mỹ & giải phóng miền Nam",
     image: "https://special.vietnamplus.vn/wp-content/uploads/2021/03/ttxvntongt-1588123540-60.jpg",
-    date: "30/04/1975",
-    location: "Sài Gòn",
-    leaders: ["Lê Duẩn", "Võ Nguyên Giáp", "Văn Tiến Dũng"],
-    description: "Chiến dịch Hồ Chí Minh lịch sử kết thúc thắng lợi với việc giải phóng Sài Gòn, thống nhất đất nước sau 30 năm chiến tranh. Xe tăng quân giải phóng húc đổ cổng Dinh Độc Lập lúc 11h30 ngày 30/4/1975.",
+    date: "1965 - 30/04/1975",
+    location: "Toàn quốc",
+    leaders: ["Hồ Chí Minh", "Lê Duẩn", "Võ Nguyên Giáp", "Văn Tiến Dũng"],
+    description: "Giai đoạn kháng chiến chống Mỹ cứu nước, từ khi Mỹ đưa quân trực tiếp vào miền Nam đến Đại thắng mùa Xuân 1975. Đỉnh cao là Tổng tiến công Mậu Thân 1968 và Chiến dịch Hồ Chí Minh, giải phóng hoàn toàn miền Nam, thống nhất đất nước.",
     significance: [
-      "Kết thúc 30 năm chiến tranh giải phóng",
-      "Thống nhất đất nước",
-      "Hoàn thành cách mạng dân tộc dân chủ nhân dân",
-      "Mở ra kỷ nguyên độc lập, thống nhất, đi lên chủ nghĩa xã hội"
+      "Đánh thắng chiến lược \"chiến tranh cục bộ\" và \"Việt Nam hóa chiến tranh\" của Mỹ",
+      "Tổng tiến công Mậu Thân tạo bước ngoặt chiến lược",
+      "Giải phóng Sài Gòn ngày 30/4/1975, thống nhất đất nước",
+      "Kết thúc 30 năm chiến tranh, mở ra kỷ nguyên độc lập, thống nhất"
     ]
   },
 ];

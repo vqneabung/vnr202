@@ -44,7 +44,7 @@ interface TimelineItem {
 const timeline: TimelineItem[] = [
   { 
     year: "1945–1946", 
-    event: "Xây dựng & bảo vệ chính quyền cách mạng", // Tiêu đề giật gân hơn
+    event: "Xây dựng và bảo vệ chính quyền cách mạng", // Tiêu đề giật gân hơn
     image: "https://file3.qdnd.vn/data/images/0/2022/07/25/huyentrang_km/2.jpg",
     date: "19/08/1945 - 19/12/1946",
     location: "Bắc Bộ và Nam Bộ",
@@ -101,7 +101,7 @@ const timeline: TimelineItem[] = [
   },
   { 
     year: "1965–1975", 
-    event: "Lãnh đạo kháng chiến chống Mỹ & giải phóng miền Nam ",
+    event: "Lãnh đạo kháng chiến chống Mỹ và giải phóng miền Nam ",
     image: "https://special.vietnamplus.vn/wp-content/uploads/2021/03/ttxvntongt-1588123540-60.jpg",
     date: "1965 - 30/04/1975",
     location: "Dọc tuyến đường Trường Sơn & Sài Gòn",
